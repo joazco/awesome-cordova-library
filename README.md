@@ -1,5 +1,7 @@
 # awesome-cordova-library
 
+[![Tests](https://github.com/joazco/awesome-cordova-library/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/joazco/awesome-cordova-library/actions/workflows/tests.yml)
+
 ## Device
 
 [See doc](./device/README.md)

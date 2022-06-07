@@ -28,7 +28,7 @@
     "install:splashscreen": "cd splashscreen && npm install",
     "install:statusbar": "cd statusbar && npm install",
     "install:vibration": "cd vibration && npm install",
-    "build:device": "cd device && npm build",
+    "build:device": "cd device && npm run build",
     "build:localstorage": "cd localStorage && npm run build",
     "build:nativeaudio": "cd nativeaudio && npm run build",
     "build:screenorientation": "cd screen-orientation && npm run build",
