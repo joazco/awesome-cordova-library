@@ -1,0 +1,61 @@
+{
+  "name": "awesome-cordova-library",
+  "version": "1.0.0",
+  "description": "Awesome library to help to use Cordova",
+  "main": "index.js",
+  "scripts": {
+    "lint:device": "cd device && npm run lint",
+    "lint:localstorage": "cd localStorage && npm run lint",
+    "lint:nativeaudio": "cd nativeaudio && npm run lint",
+    "lint:screenorientation": "cd screen-orientation && npm run lint",
+    "lint:socialsharing": "cd social-sharing && npm run lint",
+    "lint:splashscreen": "cd splashscreen && npm run lint",
+    "lint:statusbar": "cd statusbar && npm run lint",
+    "lint:vibration": "cd vibration && npm run lint",
+    "test:device": "cd device && npm test",
+    "test:localstorage": "cd localStorage && npm test",
+    "test:nativeaudio": "cd nativeaudio && npm test",
+    "test:screenorientation": "cd screen-orientation && npm test",
+    "test:socialsharing": "cd social-sharing && npm test",
+    "test:splashscreen": "cd splashscreen && npm test",
+    "test:statusbar": "cd statusbar && npm test",
+    "test:vibration": "cd vibration && npm test",
+    "install:device": "cd device && npm install",
+    "install:localstorage": "cd localStorage && npm install",
+    "install:nativeaudio": "cd nativeaudio && npm install",
+    "install:screenorientation": "cd screen-orientation && npm install",
+    "install:socialsharing": "cd social-sharing && npm install",
+    "install:splashscreen": "cd splashscreen && npm install",
+    "install:statusbar": "cd statusbar && npm install",
+    "install:vibration": "cd vibration && npm install",
+    "build:device": "cd device && npm build",
+    "build:localstorage": "cd localStorage && npm run build",
+    "build:nativeaudio": "cd nativeaudio && npm run build",
+    "build:screenorientation": "cd screen-orientation && npm run build",
+    "build:socialsharing": "cd social-sharing && npm run build",
+    "build:splashscreen": "cd splashscreen && npm run build",
+    "build:statusbar": "cd statusbar && npm run build",
+    "build:vibration": "cd vibration && npm run build",
+    "build": "npm run build:device && npm run build:localstorage && npm run build:nativeaudio && npm run build:screenorientation && npm run build:socialsharing && npm run build:splashscreen && npm run build:statusbar && npm run build:vibration",
+    "install": "npm run install:device && npm run install:localstorage && npm run install:nativeaudio && npm run install:screenorientation && npm run install:socialsharing && npm run install:splashscreen && npm run install:statusbar && npm run install:vibration",
+    "test": "npm run test:device && npm run test:localstorage && npm run test:nativeaudio && npm run test:screenorientation && npm run test:socialsharing && npm run test:splashscreen && npm run test:statusbar && npm run test:vibration",
+    "lint": "npm run lint:device && npm run lint:localstorage && npm run lint:nativeaudio && npm run lint:screenorientation && npm run lint:socialsharing && npm run lint:splashscreen && npm run lint:statusbar && npm run lint:vibration"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joazco/awesome-cordova-library.git"
+  },
+  "keywords": [
+    "cordova",
+    "pwa",
+    "mobile",
+    "ios",
+    "android"
+  ],
+  "author": "AZOULAY Jordan <jazoulay@joazco.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joazco/awesome-cordova-library/issues"
+  },
+  "homepage": "https://github.com/joazco/awesome-cordova-library#readme"
+}
