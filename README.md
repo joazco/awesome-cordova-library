@@ -14,6 +14,7 @@
 | **SplashScreen**      | [`@awesome-cordova-library/splashscreen`](https://www.npmjs.com/package/@awesome-cordova-library/splashscreen)             | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/splashscreen/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/splashscreen)             | <a href="https://www.npmjs.com/package/@awesome-cordova-library/splashscreen" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/splashscreen.svg" alt="NPM Downloads" /></a>             |
 | **StatusBar**         | [`@awesome-cordova-library/statusbar`](https://www.npmjs.com/package/@awesome-cordova-library/statusbar)                   | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/statusbar/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/statusbar)                   | <a href="https://www.npmjs.com/package/@awesome-cordova-library/statusbar" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/statusbar.svg" alt="NPM Downloads" /></a>                   |
 | **Vibration**         | [`@awesome-cordova-library/vibration`](https://www.npmjs.com/package/@awesome-cordova-library/vibration)                   | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/vibration.svg)](https://www.npmjs.com/package/@awesome-cordova-library/vibration)                          | <a href="https://www.npmjs.com/package/@awesome-cordova-library/vibration" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/vibration.svg" alt="NPM Downloads" /></a>                   |
+| **Globalization**     | [`@awesome-cordova-library/globalization`](https://www.npmjs.com/package/@awesome-cordova-library/globalization)           | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/globalization.svg)](https://www.npmjs.com/package/@awesome-cordova-library/globalization)                  | <a href="https://www.npmjs.com/package/@awesome-cordova-library/globalization" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/globalization.svg" alt="NPM Downloads" /></a>           |
 
 ## Device
 
@@ -46,3 +47,7 @@
 ## Vibration
 
 [See doc](./vibration/README.md)
+
+## Globalization
+
+[See doc](./globalization/README.md)
