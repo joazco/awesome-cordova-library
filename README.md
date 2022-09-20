@@ -15,6 +15,7 @@
 | **StatusBar**         | [`@awesome-cordova-library/statusbar`](https://www.npmjs.com/package/@awesome-cordova-library/statusbar)                   | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/statusbar/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/statusbar)                   | <a href="https://www.npmjs.com/package/@awesome-cordova-library/statusbar" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/statusbar.svg" alt="NPM Downloads" /></a>                   |
 | **Vibration**         | [`@awesome-cordova-library/vibration`](https://www.npmjs.com/package/@awesome-cordova-library/vibration)                   | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/vibration.svg)](https://www.npmjs.com/package/@awesome-cordova-library/vibration)                          | <a href="https://www.npmjs.com/package/@awesome-cordova-library/vibration" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/vibration.svg" alt="NPM Downloads" /></a>                   |
 | **Globalization**     | [`@awesome-cordova-library/globalization`](https://www.npmjs.com/package/@awesome-cordova-library/globalization)           | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/globalization.svg)](https://www.npmjs.com/package/@awesome-cordova-library/globalization)                  | <a href="https://www.npmjs.com/package/@awesome-cordova-library/globalization" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/globalization.svg" alt="NPM Downloads" /></a>           |
+| **InAppBrowser**      | [`@awesome-cordova-library/inappbrowser`](https://www.npmjs.com/package/@awesome-cordova-library/inappbrowser)             | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/inappbrowser.svg)](https://www.npmjs.com/package/@awesome-cordova-library/inappbrowser)                    | <a href="https://www.npmjs.com/package/@awesome-cordova-library/inappbrowser" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/inappbrowser.svg" alt="NPM Downloads" /></a>             |
 
 ## Device
 
@@ -51,3 +52,7 @@
 ## Globalization
 
 [See doc](./globalization/README.md)
+
+## InAppBrowser
+
+[See doc](./inappbrowser/README.md)
