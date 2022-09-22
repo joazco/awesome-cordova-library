@@ -13,11 +13,11 @@ const useInAppBrowser = () => {
    * Opens a URL in a new InAppBrowser instance, the current browser instance, or the system browser.
    * @param url string
    * @param target {"_self"|'_blank'|"_system"}
-   * @params options string
+   * @params options {string|undefined}
    * @return InAppBrowserType | Window | null
    */
   const open = useCallback(
-    (url: string, target: '_self' | '_blank' | '_system', options: string | InAppBrowserOptions) => {
+    (url: string, target: '_self' | '_blank' | '_system', options?: string | InAppBrowserOptions) => {
       return InAppBrowser.open(url, target, options);
     },
     [],

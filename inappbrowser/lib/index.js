@@ -13,10 +13,11 @@ var InAppBrowser = /** @class */ (function () {
      * Opens a URL in a new InAppBrowser instance, the current browser instance, or the system browser.
      * @param url string
      * @param target {"_self"|'_blank'|"_system"}
-     * @params options string
+     * @params options {string|undefined}
      * @return InAppBrowserType | Window | null
      */
     InAppBrowser.open = function (url, target, options) {
+        if (options === void 0) { options = 'location=yes'; }
         var finalOptions = '';
         if (typeof options !== 'string') {
             Object.keys(options).forEach(function (key, i) {

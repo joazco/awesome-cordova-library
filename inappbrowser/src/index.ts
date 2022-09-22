@@ -12,13 +12,13 @@ export default class InAppBrowser {
    * Opens a URL in a new InAppBrowser instance, the current browser instance, or the system browser.
    * @param url string
    * @param target {"_self"|'_blank'|"_system"}
-   * @params options string
+   * @params options {string|undefined}
    * @return InAppBrowserType | Window | null
    */
   static open(
     url: string,
     target: '_self' | '_blank' | '_system',
-    options: string | InAppBrowserOptions,
+    options: string | InAppBrowserOptions = 'location=yes',
   ): InAppBrowserType | Window | null {
     let finalOptions: string = '';
     if (typeof options !== 'string') {

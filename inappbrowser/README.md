@@ -19,7 +19,7 @@ class InAppBrowser {
   static open(
     url: string,
     target: '_self' | '_blank' | '_system',
-    options: string | InAppBrowserOptions,
+    options?: string | InAppBrowserOptions,
   ): InAppBrowserType | Window | null;
 }
 ```
@@ -30,7 +30,7 @@ class InAppBrowser {
 import InAppBrowser from '@awesome-cordova-library/inappbrowser';
 
 // Open Joazco.com
-InAppBrowser.open('http://joazco.com', '_blank', 'location=yes');
+InAppBrowser.open('https://joazco.com', '_blank', 'location=yes');
 ```
 
 ## React
@@ -41,7 +41,7 @@ InAppBrowser.open('http://joazco.com', '_blank', 'location=yes');
 const useInAppBrowser: () => (
   url: string,
   target: '_self' | '_blank' | '_system',
-  options: string | InAppBrowserOptions,
+  options?: string | InAppBrowserOptions,
 ) => Window | InAppBrowserType | null;
 ```
 

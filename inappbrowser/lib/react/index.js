@@ -13,7 +13,7 @@ var useInAppBrowser = function () {
      * Opens a URL in a new InAppBrowser instance, the current browser instance, or the system browser.
      * @param url string
      * @param target {"_self"|'_blank'|"_system"}
-     * @params options string
+     * @params options {string|undefined}
      * @return InAppBrowserType | Window | null
      */
     var open = (0, react_1.useCallback)(function (url, target, options) {
