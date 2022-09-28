@@ -20,7 +20,9 @@ var useNativeAudio = function () {
         });
     }, []);
     var play = (0, react_1.useCallback)(function (id, completeCallback) {
-        if (completeCallback === void 0) { completeCallback = function () { }; }
+        if (completeCallback === void 0) { completeCallback = function () {
+            console.warn('Sound played complete');
+        }; }
         return new Promise(function (resolve, reject) {
             __1.default.play(id, resolve, reject, completeCallback);
         });
