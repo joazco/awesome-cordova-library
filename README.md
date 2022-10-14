@@ -17,6 +17,7 @@
 | **Globalization**     | [`@awesome-cordova-library/globalization`](https://www.npmjs.com/package/@awesome-cordova-library/globalization)           | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/globalization/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/globalization)           | <a href="https://www.npmjs.com/package/@awesome-cordova-library/globalization" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/globalization.svg" alt="NPM Downloads" /></a>           |
 | **InAppBrowser**      | [`@awesome-cordova-library/inappbrowser`](https://www.npmjs.com/package/@awesome-cordova-library/inappbrowser)             | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/inappbrowser/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/inappbrowser)             | <a href="https://www.npmjs.com/package/@awesome-cordova-library/inappbrowser" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/inappbrowser.svg" alt="NPM Downloads" /></a>             |
 | **Dialogs**           | [`@awesome-cordova-library/dialogs`](https://www.npmjs.com/package/@awesome-cordova-library/dialogs)                       | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/dialogs/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/dialogs)                       | <a href="https://www.npmjs.com/package/@awesome-cordova-library/dialogs" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/dialogs.svg" alt="NPM Downloads" /></a>                       |
+| **Rate Dialog**       | [`@awesome-cordova-library/ratedialog`](https://www.npmjs.com/package/@awesome-cordova-library/ratedialog)                 | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/ratedialog/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/ratedialog)                 | <a href="https://www.npmjs.com/package/@awesome-cordova-library/ratedialog" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/ratedialog.svg" alt="NPM Downloads" /></a>                 |
 
 ## Device
 
@@ -61,3 +62,7 @@
 ## Dialogs
 
 [See doc](./dialogs/README.md)
+
+## Rate Dialog
+
+[See doc](./ratedialog/README.md)
