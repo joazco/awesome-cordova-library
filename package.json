@@ -15,6 +15,7 @@
     "lint:globalization": "cd globalization && npm run lint",
     "lint:inappbrowser": "cd inappbrowser && npm run lint",
     "lint:dialogs": "cd dialogs && npm run lint",
+    "lint:ratedialog": "cd ratedialog && npm run lint",
     "test:device": "cd device && npm test",
     "test:localstorage": "cd localStorage && npm test",
     "test:nativeaudio": "cd nativeaudio && npm test",
