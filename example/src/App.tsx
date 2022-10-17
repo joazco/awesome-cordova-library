@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 import { useScreenOrientationConfig, useStatusBarConfig } from "./hooks";
-import { Button, Container, Grid } from "semantic-ui-react";
+import { Container, Grid } from "semantic-ui-react";
 import { HeaderComponent } from "./components";
 import PluginViewComponent from "./components/PluginViewComponent";
-import { Device, StatusBar } from "./plugins";
+import { Device, StatusBar, Vibration } from "./plugins";
 
 const App = () => {
   useScreenOrientationConfig();
@@ -19,6 +19,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Status Bar">
           <StatusBar />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="Vibration">
+          <Vibration />
         </PluginViewComponent>
       </Grid>
     </Container>
