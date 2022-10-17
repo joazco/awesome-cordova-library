@@ -66,3 +66,7 @@
 ## Rate Dialog
 
 [See doc](./ratedialog/README.md)
+
+## Example
+
+[See doc](./example/README.md)
