@@ -5,12 +5,12 @@ import useSocialSharing from "@awesome-cordova-library/social-sharing/lib/react"
 const SocialSharing = () => {
   const { share } = useSocialSharing();
 
-  const [shareMessage, setShareMessage] = useState("Share my message");
+  const [shareMessage, setShareMessage] = useState<string>("Share my message");
 
   const messageToShare = useCallback(() => {
     share(
       shareMessage,
-      null,
+      shareMessage,
       null,
       "https://github.com/joazco/awesome-cordova-library",
       null

@@ -389,7 +389,10 @@ function App() {
   const { getPreferredLanguage, ..... } = useGlobalization();
 
   useEffect(() => {
-    console.log(`Preferred language ${getPreferredLanguage()}`);
+    getPreferredLanguage().then((language) => {
+      console.log(`Preferred language ${language.value}`);
+    })
+    
   }, []);
 
   return <div />;
