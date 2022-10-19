@@ -7,6 +7,7 @@
   "dependencies": {
     "@awesome-cordova-library/device": "^1.0.6",
     "@awesome-cordova-library/screen-orientation": "^1.0.1",
+    "@awesome-cordova-library/splashscreen": "^1.0.0",
     "@awesome-cordova-library/statusbar": "^1.0.0",
     "@awesome-cordova-library/vibration": "^1.0.1",
     "@testing-library/jest-dom": "^5.11.4",
@@ -62,6 +63,7 @@
     "cordova-ios": "^6.2.0",
     "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-screen-orientation": "^3.0.2",
+    "cordova-plugin-splashscreen": "^6.0.2",
     "cordova-plugin-statusbar": "^3.0.0",
     "cordova-plugin-vibration": "^3.1.1",
     "cordova-res": "^0.15.4",
@@ -72,7 +74,8 @@
       "cordova-plugin-statusbar": {},
       "cordova-plugin-screen-orientation": {},
       "cordova-plugin-device": {},
-      "cordova-plugin-vibration": {}
+      "cordova-plugin-vibration": {},
+      "cordova-plugin-splashscreen": {}
     },
     "platforms": [
       "ios"

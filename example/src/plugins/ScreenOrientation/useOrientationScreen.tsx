@@ -2,7 +2,7 @@ import { OrientationLockCordovaType } from "@awesome-cordova-library/screen-orie
 import React, { useMemo, useState, useEffect } from "react";
 import useScreenOrientation from "@awesome-cordova-library/screen-orientation/lib/react";
 
-const CustomHook = () => {
+const useOrientationScreen = () => {
   const [valueOrientation, setValueOrientation] = useState<
     OrientationLockCordovaType | undefined
   >();
@@ -46,9 +46,9 @@ const CustomHook = () => {
     valueOrientation,
     setValueOrientation,
     orientationOptions,
-    lock, 
+    lock,
     currentOrientation,
   };
 };
 
-export default CustomHook;
+export default useOrientationScreen;

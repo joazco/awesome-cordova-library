@@ -4,7 +4,13 @@ import { useScreenOrientationConfig, useStatusBarConfig } from "./hooks";
 import { Container, Grid } from "semantic-ui-react";
 import { HeaderComponent } from "./components";
 import PluginViewComponent from "./components/PluginViewComponent";
-import { Device, StatusBar, Vibration, ScreenOrientation } from "./plugins";
+import {
+  Device,
+  StatusBar,
+  Vibration,
+  ScreenOrientation,
+  SplashScreen,
+} from "./plugins";
 
 const App = () => {
   useScreenOrientationConfig();
@@ -25,6 +31,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Vibration">
           <Vibration />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="Splash Screen">
+          <SplashScreen />
         </PluginViewComponent>
       </Grid>
     </Container>
