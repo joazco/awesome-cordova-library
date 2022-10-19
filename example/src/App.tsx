@@ -11,6 +11,7 @@ import {
   ScreenOrientation,
   SplashScreen,
   Globalization,
+  SocialSharing,
 } from "./plugins";
 
 const App = () => {
@@ -38,6 +39,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Globalization">
           <Globalization />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="Social Sharing">
+          <SocialSharing />
         </PluginViewComponent>
       </Grid>
     </Container>
