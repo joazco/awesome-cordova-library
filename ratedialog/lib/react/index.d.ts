@@ -1,12 +1,14 @@
 import { DialogRateLanguagesAccepted, DialogRateOption } from '../types';
 /**
  * @author AZOULAY Jordan<jazoulay@joazco.com>
- * This plugin provides access to some native dialog UI elements via a global navigator.notification object.
- * Also, check out {@link https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-dialogs/index.html Cordova}
- * @requires module:cordova-plugin-dialogs
+ * A plugin to provide rate this app functionality into your cordova application
+ * @requires module:@awesome-cordova-library/localstorage
+ * @requires module:@awesome-cordova-library/dialogs
+ * @requires module:@awesome-cordova-library/device
+ * @requires module:@awesome-cordova-library/inappbrowser
  */
 declare const useRateDialog: (initOptions: DialogRateOption) => {
-    setPreference: (options: DialogRateOption) => void;
+    setPreference: (options: Partial<DialogRateOption>) => void;
     promptForRating: (force?: boolean) => void;
     resetUserRatedOrRefused: () => void;
     getUserRatedOrRefused: () => boolean | undefined;

@@ -175,3 +175,5 @@ export default class RateDialog {
     console.warn('RateDialog is uninstalled or incompatible with current platform');
   }
 }
+
+export { DialogRateOption, DialogRateLanguagesAccepted };

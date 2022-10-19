@@ -41,3 +41,4 @@ export default class RateDialog {
     static setLocale(locale: DialogRateLanguagesAccepted): void;
     static warnPluginIsUnInstallOrIncompatible(): void;
 }
+export { DialogRateOption, DialogRateLanguagesAccepted };
