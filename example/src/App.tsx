@@ -12,6 +12,7 @@ import {
   SplashScreen,
   Globalization,
   SocialSharing,
+  BatteryStatus,
 } from "./plugins";
 
 const App = () => {
@@ -39,6 +40,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Globalization">
           <Globalization />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="Battery Status">
+          <BatteryStatus />
         </PluginViewComponent>
         <PluginViewComponent pluginName="Social Sharing">
           <SocialSharing />
