@@ -5,7 +5,7 @@ export enum DestinationType {
   FILE_URI = 1,
 }
 
-export enum SourceType {
+export enum PictureSourceType {
   /** Choose image from the device's photo library (same as SAVEDPHOTOALBUM for Android) */
   PHOTOLIBRARY = 0,
   /** Take picture from camera */
@@ -37,20 +37,10 @@ export enum Direction {
   FRONT = 1,
 }
 
-export type PopoverOptions = {
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-  arrowDir: number;
-  popoverWidth: number;
-  popoverHeight: number;
-};
-
 export type CameraOptions = {
   quality: number;
   destinationType: DestinationType;
-  sourceType: SourceType;
+  sourceType: PictureSourceType;
   allowEdit: boolean;
   encodingType: EncodingType;
   targetWidth?: number;
@@ -58,6 +48,16 @@ export type CameraOptions = {
   mediaType: MediaType;
   correctOrientation?: boolean;
   saveToPhotoAlbum?: boolean;
-  popoverOptions?: PopoverOptions;
+  popoverOptions?: any;
   cameraDirection: Direction;
+};
+
+export const defaultOptions: CameraOptions = {
+  quality: 50,
+  destinationType: DestinationType.FILE_URI,
+  sourceType: PictureSourceType.CAMERA,
+  allowEdit: false,
+  encodingType: EncodingType.JPEG,
+  mediaType: MediaType.PICTURE,
+  cameraDirection: Direction.BACK,
 };

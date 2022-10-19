@@ -1,75 +1,62 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PictureSourceType = exports.MediaType = exports.EncodingType = exports.Direction = exports.DestinationType = void 0;
+var types_1 = require("./types");
+Object.defineProperty(exports, "DestinationType", { enumerable: true, get: function () { return types_1.DestinationType; } });
+Object.defineProperty(exports, "Direction", { enumerable: true, get: function () { return types_1.Direction; } });
+Object.defineProperty(exports, "EncodingType", { enumerable: true, get: function () { return types_1.EncodingType; } });
+Object.defineProperty(exports, "MediaType", { enumerable: true, get: function () { return types_1.MediaType; } });
+Object.defineProperty(exports, "PictureSourceType", { enumerable: true, get: function () { return types_1.PictureSourceType; } });
 /**
  * @author AZOULAY Jordan<jazoulay@joazco.com>
- * This plugin provides an implementation of an old version of the Battery Status Events API.
- * Also, check out {@link https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-battery-status/index.html Cordova}
- * @requires module:cordova-plugin-battery-status
+ * This plugin defines a global navigator.camera object, which provides an API for taking pictures and for choosing images from the system's image library.
+ * Also, check out {@link https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-camera/index.html Cordova}
+ * @requires module:cordova-plugin-camera
  */
-var BatteryStatus = /** @class */ (function () {
-    function BatteryStatus() {
+var Camera = /** @class */ (function () {
+    function Camera() {
     }
     /**
-     * Fires when the battery charge percentage changes by at least 1 percent, or when the device is plugged in or unplugged. Returns an object containing battery status.
-     * @param callback {(batterystatus: BatteryStatusType) => void}
+     * Takes a photo using the camera, or retrieves a photo from the device's image gallery. The image is passed to the success callback as a Base64-encoded String, or as the URI for the image file.
+     * @param cameraSuccess {(imageData: string) => void}
+     * @param cameraError {(message: string) => void}
+     * @param cameraOptions {Partial<CameraOptions>|undefined}
      */
-    BatteryStatus.onBatteryStatus = function (callback) {
-        if (typeof window.cordova === 'undefined') {
-            BatteryStatus.onBatteryStatusWeb(callback);
+    Camera.getPicture = function (cameraSuccess, cameraError, cameraOptions) {
+        if (typeof navigator.camera !== 'undefined') {
+            navigator.camera.getPicture(cameraSuccess, cameraError, __assign(__assign({}, types_1.defaultOptions), cameraOptions));
         }
         else {
-            window.addEventListener('batterystatus', function (status) {
-                callback(status);
-            }, false);
+            Camera.warnPluginIsUnInstallOrIncompatible();
         }
     };
     /**
-     * Fires when the battery charge percentage changes by at least 1 percent, or when the device is plugged in or unplugged. Returns an object containing battery status.
-     * @param callback {(batterystatus: BatteryStatusType) => void}
+     * Removes intermediate image files that are kept in temporary storage after calling camera.getPicture. Applies only when the value of Camera.sourceType equals Camera.PictureSourceType.CAMERA and the Camera.destinationType equals Camera.DestinationType.FILE_URI.
+     * @param onSuccess {() => void}
+     * @param onFail {() => void}
      */
-    BatteryStatus.onBatteryStatusWeb = function (callback) {
-        if (navigator.getBattery) {
-            navigator.getBattery().then(function (battery) {
-                callback({ isPlugged: battery.charging, level: battery.level * 100 });
-                battery.onlevelchange = function () {
-                    callback({ isPlugged: battery.charging, level: battery.level * 100 });
-                };
-            });
-        }
-    };
-    /**
-     * Fires when the battery charge percentage reaches the low charge threshold. This threshold value is device-specific.
-     * Incompatible without cordova
-     * @param callback {(batterystatus: BatteryStatusType) => void}
-     */
-    BatteryStatus.onBatteryLow = function (callback) {
-        if (typeof window.cordova !== 'undefined') {
-            window.addEventListener('onBatteryLow', function (status) {
-                callback(status);
-            }, false);
+    Camera.cleanup = function (onSuccess, onFail) {
+        if (typeof navigator.camera !== 'undefined') {
+            navigator.camera.cleanup(onSuccess, onFail);
         }
         else {
-            BatteryStatus.warnPluginIsUnInstallOrIncompatible();
+            Camera.warnPluginIsUnInstallOrIncompatible();
         }
     };
-    /**
-     * Fires when the battery charge percentage reaches the critical charge threshold. This threshold value is device-specific.
-     * Incompatible without cordova
-     * @param callback {(batterystatus: BatteryStatusType) => void}
-     */
-    BatteryStatus.onBatteryCritical = function (callback) {
-        if (typeof window.cordova !== 'undefined') {
-            window.addEventListener('batterycritical', function (status) {
-                callback(status);
-            }, false);
-        }
-        else {
-            BatteryStatus.warnPluginIsUnInstallOrIncompatible();
-        }
+    Camera.warnPluginIsUnInstallOrIncompatible = function () {
+        console.warn('Camera is uninstalled or incompatible with current platform');
     };
-    BatteryStatus.warnPluginIsUnInstallOrIncompatible = function () {
-        console.warn('BatteryStatus is uninstalled or incompatible with current platform');
-    };
-    return BatteryStatus;
+    return Camera;
 }());
-exports.default = BatteryStatus;
+exports.default = Camera;

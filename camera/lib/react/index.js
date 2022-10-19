@@ -4,20 +4,17 @@ var react_1 = require("react");
 var __1 = require("../");
 /**
  * @author AZOULAY Jordan<jazoulay@joazco.com>
- * This plugin provides access to some native dialog UI elements via a global navigator.notification object.
- * Also, check out {@link https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-battery-status/index.html Cordova}
- * @requires module:cordova-plugin-battery-status
+ * This plugin defines a global navigator.camera object, which provides an API for taking pictures and for choosing images from the system's image library.
+ * Also, check out {@link https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-camera/index.html Cordova}
+ * @requires module:cordova-plugin-camera
  */
-var useBatteryStatus = function () {
-    var onBatteryStatus = (0, react_1.useCallback)(function (callback) {
-        __1.default.onBatteryStatus(callback);
+var useCamera = function () {
+    var getPicture = (0, react_1.useCallback)(function (cameraSuccess, cameraError, cameraOptions) {
+        __1.default.getPicture(cameraSuccess, cameraError, cameraOptions);
     }, []);
-    var onBatteryLow = (0, react_1.useCallback)(function (callback) {
-        __1.default.onBatteryLow(callback);
+    var cleanup = (0, react_1.useCallback)(function (onSuccess, onFail) {
+        __1.default.cleanup(onSuccess, onFail);
     }, []);
-    var onBatteryCritical = (0, react_1.useCallback)(function (callback) {
-        __1.default.onBatteryCritical(callback);
-    }, []);
-    return { onBatteryStatus: onBatteryStatus, onBatteryLow: onBatteryLow, onBatteryCritical: onBatteryCritical };
+    return { getPicture: getPicture, cleanup: cleanup };
 };
-exports.default = useBatteryStatus;
+exports.default = useCamera;

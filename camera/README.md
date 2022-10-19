@@ -1,14 +1,14 @@
-# @awesome-cordova-library/batterystatus
+# @awesome-cordova-library/camera
 
-This plugin provides an implementation of an old version of the Battery Status Events API.
+This plugin defines a global navigator.camera object, which provides an API for taking pictures and for choosing images from the system's image library.
 
-[Cordova documentation](https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-battery-status/index.html)
+[Cordova documentation](https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-camera/index.html#module_CameraPopoverHandle)
 
 ## Installation
 
 ```sh
-cordova plugin add cordova-plugin-battery-status
-npm i @awesome-cordova-library/batterystatus
+cordova plugin add cordova-plugin-camera
+npm i @awesome-cordova-library/camera
 ```
 
 ## Vanilla
@@ -16,40 +16,37 @@ npm i @awesome-cordova-library/batterystatus
 ### Declaration
 
 ```typescript
-class BatteryStatus {
+class Camera {
   /**
-   * Fires when the battery charge percentage changes by at least 1 percent, or when the device is plugged in or unplugged. Returns an object containing battery status.
-   * @param callback {(batterystatus: BatteryStatusType) => void}
+   * Takes a photo using the camera, or retrieves a photo from the device's image gallery. The image is passed to the success callback as a Base64-encoded String, or as the URI for the image file.
+   * @param cameraSuccess {(imageData: string) => void}
+   * @param cameraError {(message: string) => void}
+   * @param cameraOptions {Partial<CameraOptions>|undefined}
    */
-  static onBatteryStatus(callback: (batterystatus: BatteryStatusType) => void): void;
+  static getPicture(
+    cameraSuccess: (imageData: string) => void,
+    cameraError: (message: string) => void,
+    cameraOptions?: Partial<CameraOptions>,
+  ): void;
   /**
-   * Fires when the battery charge percentage changes by at least 1 percent, or when the device is plugged in or unplugged. Returns an object containing battery status.
-   * @param callback {(batterystatus: BatteryStatusType) => void}
+   * Removes intermediate image files that are kept in temporary storage after calling camera.getPicture. Applies only when the value of Camera.sourceType equals Camera.PictureSourceType.CAMERA and the Camera.destinationType equals Camera.DestinationType.FILE_URI.
+   * @param onSuccess {() => void}
+   * @param onFail {() => void}
    */
-  static onBatteryStatusWeb(callback: (batterystatus: BatteryStatusType) => void): void;
-  /**
-   * Fires when the battery charge percentage reaches the low charge threshold. This threshold value is device-specific.
-   * Incompatible without cordova
-   * @param callback {(batterystatus: BatteryStatusType) => void}
-   */
-  static onBatteryLow(callback: (batterystatus: BatteryStatusType) => void): void;
-  /**
-   * Fires when the battery charge percentage reaches the critical charge threshold. This threshold value is device-specific.
-   * Incompatible without cordova
-   * @param callback {(batterystatus: BatteryStatusType) => void}
-   */
-  static onBatteryCritical(callback: (batterystatus: BatteryStatusType) => void): void;
+  static cleanup(onSuccess: () => void, onFail: () => void): void;
 }
 ```
 
 ### Usages
 
 ```typescript
-import BatteryStatus from '@awesome-cordova-library/batterystatus';
+import Camera, { DestinationType } from '@awesome-cordova-library/camera';
 
-BatteryStatus.onBatteryStatus((batterystatus) => {
-  console.log(`Battery is plugged: ${batterystatus.isPlugged} // Battery level: ${batterystatus.level}`);
-});
+BatteryStatus.getPicture(
+  (imageData) => console.log(imageData),
+  (messageError) => console.log(messageError),
+  { destinationType: DestinationType.DATA_URL },
+);
 ```
 
 ## React
@@ -57,34 +54,45 @@ BatteryStatus.onBatteryStatus((batterystatus) => {
 ### Declaration
 
 ```typescript
-const useBatteryStatus: () => {
-  onBatteryStatus: (callback: (batterystatus: BatteryStatusType) => void) => void;
-  onBatteryLow: (callback: (batterystatus: BatteryStatusType) => void) => void;
-  onBatteryCritical: (callback: (batterystatus: BatteryStatusType) => void) => void;
+const useCamera: () => {
+  getPicture: (
+    cameraSuccess: (imageData: string) => void,
+    cameraError: (message: string) => void,
+    cameraOptions?: Partial<CameraOptions>,
+  ) => void;
+  cleanup: (onSuccess: () => void, onFail: () => void) => void;
 };
 ```
 
 ### Usages
 
 ```typescript
-import { useEffect, useState } from 'react';
-import { BatteryStatusType } from '@awesome-cordova-library/batterystatus';
-import useBatteryStatus from '@awesome-cordova-library/batterystatus/lib/react';
+import { useEffect, useState, useCallback } from 'react';
+import useCamera from '@awesome-cordova-library/camera/lib/react';
+import { DestinationType } from '@awesome-cordova-library/camera';
 
 function App() {
-  const [batteryStatus, setBatteryStatus] = useState<BatteryStatusType>();
-  const { onBatteryStatus } = useBatteryStatus();
+  const [srcImage, setSrcImage] = useState<string | undefined>();
+  const { getPicture } = useCamera();
 
-  useEffect(() => {
-    onBatteryStatus((batterystatus) => {
-      setBatteryStatus(batterystatus);
-    });
-  }, [onBatteryStatus]);
+  const takePicture = useCallback(() => {
+    getPicture(
+      (imageData) => setSrcImage(imageData),
+      () => {
+        alert('Error to take picture');
+      },
+      {
+        destinationType: DestinationType.DATA_URL,
+      },
+    );
+  }, [getPicture]);
 
   return (
     <div>
-      <p>Battery Is plugged: {String(batteryStatus?.isPlugged)}</p>
-      <p>Battery level: {batteryStatus?.level}</p>
+      <button fluid primary onClick={takePicture}>
+        Get Picture
+      </button>
+      {srcImage && <img src={`data:image/jpeg;base64,${srcImage}`} alt="" />}
     </div>
   );
 }

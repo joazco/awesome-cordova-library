@@ -19,6 +19,7 @@
 | **Dialogs**           | [`@awesome-cordova-library/dialogs`](https://www.npmjs.com/package/@awesome-cordova-library/dialogs)                       | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/dialogs/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/dialogs)                       | <a href="https://www.npmjs.com/package/@awesome-cordova-library/dialogs" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/dialogs.svg" alt="NPM Downloads" /></a>                       |
 | **Rate Dialog**       | [`@awesome-cordova-library/ratedialog`](https://www.npmjs.com/package/@awesome-cordova-library/ratedialog)                 | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/ratedialog/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/ratedialog)                 | <a href="https://www.npmjs.com/package/@awesome-cordova-library/ratedialog" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/ratedialog.svg" alt="NPM Downloads" /></a>                 |
 | **Battery Status**    | [`@awesome-cordova-library/batterystatus`](https://www.npmjs.com/package/@awesome-cordova-library/batterystatus)           | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/batterystatus/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/batterystatus)           | <a href="https://www.npmjs.com/package/@awesome-cordova-library/batterystatus" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/batterystatus.svg" alt="NPM Downloads" /></a>           |
+| **Camera**            | [`@awesome-cordova-library/camera`](https://www.npmjs.com/package/@awesome-cordova-library/camera)                         | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/camera/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/camera)                         | <a href="https://www.npmjs.com/package/@awesome-cordova-library/camera" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/camera.svg" alt="NPM Downloads" /></a>                         |
 
 ## Device
 
@@ -71,6 +72,10 @@
 ## Battery Status
 
 [See doc](./batterystatus/README.md)
+
+## Camera
+
+[See doc](./camera/README.md)
 
 ## Example
 

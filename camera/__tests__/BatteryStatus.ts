@@ -1,19 +1,30 @@
 import { beforeEach, expect, test } from '@jest/globals';
-import BatteryStatus from '../src';
+import Camera from '../src';
 
 beforeEach(() => {
-  (global as any).window = {};
   /* tslint:disable-next-line:no-any */
   (global as any).navigator = {
-    getBattery: (): Promise<{ charging: boolean; level: number }> => {
-      return new Promise((resolve) => {
-        resolve({
-          charging: true,
-          level: 0.8,
-        });
-      });
+    camera: {
+      getPicture: (cameraSuccess: () => void, cameraError: () => void, cameraOptions: any) => {
+        expect(true).toBeTruthy();
+      },
+      cleanup: (cameraSuccess: () => void, cameraError: () => void) => {
+        expect(true).toBeTruthy();
+      },
     },
   };
 });
 
-test('Test battery is plugged', () => {});
+test('Test camera getPicture', () => {
+  Camera.getPicture(
+    () => {},
+    () => {},
+  );
+});
+
+test('Test camera cleanup', () => {
+  Camera.cleanup(
+    () => {},
+    () => {},
+  );
+});

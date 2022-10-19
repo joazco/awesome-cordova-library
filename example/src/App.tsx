@@ -15,6 +15,7 @@ import {
   InAppBrowser,
   BatteryStatus,
   RateDialog,
+  Camera,
 } from "./plugins";
 
 const App = () => {
@@ -54,6 +55,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Rate Dialog">
           <RateDialog />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="Camera">
+          <Camera />
         </PluginViewComponent>
       </Grid>
     </Container>
