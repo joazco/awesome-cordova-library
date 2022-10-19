@@ -10,6 +10,7 @@ import {
   Vibration,
   ScreenOrientation,
   SplashScreen,
+  Globalization,
 } from "./plugins";
 
 const App = () => {
@@ -34,6 +35,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Splash Screen">
           <SplashScreen />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="Globalization">
+          <Globalization />
         </PluginViewComponent>
       </Grid>
     </Container>

@@ -1,9 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useCallback } from "react";
 import { Container, Grid, Button } from "semantic-ui-react";
 import useSplashScreen from "@awesome-cordova-library/splashscreen/lib/react";
 
 const SplashScreen: React.FC = () => {
   const { show, hide } = useSplashScreen();
+
+  const showSplashScreen = useCallback(() => {
+    show();
+    setTimeout(() => {
+      hide();
+    }, 3000);
+  }, [hide, show]);
 
   return (
     <Container>
@@ -12,10 +19,7 @@ const SplashScreen: React.FC = () => {
           <Grid.Column width={16}>
             <Button
               onClick={() => {
-                show();
-                setTimeout(() => {
-                  hide();
-                }, 3000);
+                showSplashScreen();
               }}
               fluid
               primary
