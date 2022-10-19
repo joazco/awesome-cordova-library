@@ -12,6 +12,7 @@ import {
   SplashScreen,
   Globalization,
   SocialSharing,
+  InAppBrowser,
 } from "./plugins";
 
 const App = () => {
@@ -42,6 +43,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Social Sharing">
           <SocialSharing />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="In App Browser">
+          <InAppBrowser />
         </PluginViewComponent>
       </Grid>
     </Container>

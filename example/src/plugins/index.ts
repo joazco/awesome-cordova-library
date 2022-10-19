@@ -5,3 +5,4 @@ export { default as ScreenOrientation } from "./ScreenOrientation";
 export { default as SplashScreen } from "./SplashScreen";
 export { default as Globalization } from "./Globalization";
 export { default as SocialSharing } from "./SocialSharing";
+export { default as InAppBrowser } from "./InAppBrowser";
