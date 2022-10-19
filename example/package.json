@@ -9,6 +9,7 @@
     "@awesome-cordova-library/device": "^1.0.6",
     "@awesome-cordova-library/globalization": "^1.0.0",
     "@awesome-cordova-library/inappbrowser": "^1.0.1",
+    "@awesome-cordova-library/ratedialog": "^1.0.5",
     "@awesome-cordova-library/screen-orientation": "^1.0.1",
     "@awesome-cordova-library/social-sharing": "^1.0.0",
     "@awesome-cordova-library/splashscreen": "^1.0.0",
@@ -67,6 +68,7 @@
     "cordova-ios": "^6.2.0",
     "cordova-plugin-battery-status": "^2.0.3",
     "cordova-plugin-device": "^2.1.0",
+    "cordova-plugin-dialogs": "^2.0.2",
     "cordova-plugin-globalization": "^1.11.0",
     "cordova-plugin-inappbrowser": "^5.0.0",
     "cordova-plugin-screen-orientation": "^3.0.2",
@@ -90,7 +92,8 @@
         "PHOTO_LIBRARY_USAGE_DESCRIPTION": "This app requires photo library access to function properly."
       },
       "cordova-plugin-inappbrowser": {},
-      "cordova-plugin-battery-status": {}
+      "cordova-plugin-battery-status": {},
+      "cordova-plugin-dialogs": {}
     },
     "platforms": [
       "ios"
