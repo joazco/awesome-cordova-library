@@ -5,8 +5,8 @@ import useRateDialog from "@awesome-cordova-library/ratedialog/lib/react";
 const RateDialog: React.FC = () => {
   const languageOptions = useMemo(() => {
     return [
-      { key: "french", value: "fr", text: "French" },
-      { key: "english", value: "en", text: "English" },
+      { key: "french", value: "fr", flag: 'fr', text: "French" },
+      { key: "english", value: "en",flag: 'uk', text: "English" },
     ];
   }, []);
 
