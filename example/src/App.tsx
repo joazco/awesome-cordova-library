@@ -17,6 +17,7 @@ import {
   RateDialog,
   Camera,
   Dialogs,
+  NetworkInformation,
 } from "./plugins";
 
 const App = () => {
@@ -47,6 +48,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Battery Status">
           <BatteryStatus />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="Network Information">
+          <NetworkInformation />
         </PluginViewComponent>
         <PluginViewComponent pluginName="Social Sharing">
           <SocialSharing />
