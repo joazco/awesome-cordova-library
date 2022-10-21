@@ -7,5 +7,6 @@ export { default as Globalization } from "./Globalization";
 export { default as SocialSharing } from "./SocialSharing";
 export { default as InAppBrowser } from "./InAppBrowser";
 export { default as BatteryStatus } from "./BatteryStatus";
-export { default as RateDialog } from "./RateDialog";
 export { default as Camera } from "./Camera";
+export { default as RateDialog } from "./RateDialog"
+export { default as Dialogs} from "./Dialogs"
