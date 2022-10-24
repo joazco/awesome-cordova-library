@@ -11,3 +11,4 @@ export { default as Camera } from "./Camera";
 export { default as RateDialog } from "./RateDialog";
 export { default as Dialogs } from "./Dialogs";
 export { default as NetworkInformation } from "./NetworkInformation";
+export { default as NativeAudio } from "./NativeAudio";

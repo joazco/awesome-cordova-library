@@ -18,6 +18,7 @@ import {
   Camera,
   Dialogs,
   NetworkInformation,
+  NativeAudio,
 } from "./plugins";
 
 const App = () => {
@@ -66,6 +67,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Camera">
           <Camera />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="Native Audio">
+          <NativeAudio />
         </PluginViewComponent>
       </Grid>
     </Container>
