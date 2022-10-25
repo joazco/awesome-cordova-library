@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/globalization",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin obtains information and performs operations specific to the user's locale, language, and timezone. Note the difference between locale and language: locale controls how numbers, dates, and times are displayed for a region, while language determines what language text appears as, independently of locale settings.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

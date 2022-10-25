@@ -20,11 +20,11 @@ npm i @awesome-cordova-library/ratedialog
 | usesUntilPrompt                         | number     | Count of runs of application before dialog will be displayed           |
 | storeAppURL.ios                         | number     | application id in AppStore (ex: 1234567)                               |
 | storeAppURL.android                     | number     | application id in Google Store (ex: com.joazco.cordovaawesomelibrary)  |
-| forceText.rate_dialog_modal_title       | string     | Title of modal                                                         |
-| forceText.rate_dialog_content           | string     | Content of modal                                                       |
-| forceText.rate_dialog_modal_btn_ratenow | string     | Text of button rate now                                                |
-| forceText.rate_dialog_modal_btn_no      | string     | Text of button no                                                      |
-| rate_dialog_modal_btn_maybe_later       | string     | Text of button maybe later                                             |
+| forceText.rate_dialog_modal_title       | string     | **optional** Title of modal                                                         |
+| forceText.rate_dialog_content           | string     | **optional**  Content of modal                                                       |
+| forceText.rate_dialog_modal_btn_ratenow | string     | **optional**  Text of button rate now                                                |
+| forceText.rate_dialog_modal_btn_no      | string     | **optional**  Text of button no                                                      |
+| forceText.rate_dialog_modal_btn_maybe_later       | string     | **optional**  Text of button maybe later                                             |
 
 ## Vanilla
 
