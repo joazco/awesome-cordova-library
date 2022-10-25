@@ -21,6 +21,7 @@
 | **Battery Status**      | [`@awesome-cordova-library/batterystatus`](https://www.npmjs.com/package/@awesome-cordova-library/batterystatus)             | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/batterystatus/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/batterystatus)             | <a href="https://www.npmjs.com/package/@awesome-cordova-library/batterystatus" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/batterystatus.svg" alt="NPM Downloads" /></a>             |
 | **Camera**              | [`@awesome-cordova-library/camera`](https://www.npmjs.com/package/@awesome-cordova-library/camera)                           | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/camera/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/camera)                           | <a href="https://www.npmjs.com/package/@awesome-cordova-library/camera" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/camera.svg" alt="NPM Downloads" /></a>                           |
 | **Network Information** | [`@awesome-cordova-library/network-information`](https://www.npmjs.com/package/@awesome-cordova-library/network-information) | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/network-information/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/network-information) | <a href="https://www.npmjs.com/package/@awesome-cordova-library/network-information" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/network-information.svg" alt="NPM Downloads" /></a> |
+| **Geolocation**         | [`@awesome-cordova-library/geolocation`](https://www.npmjs.com/package/@awesome-cordova-library/geolocation)                 | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/geolocation/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/geolocation)                 | <a href="https://www.npmjs.com/package/@awesome-cordova-library/geolocation" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/geolocation.svg" alt="NPM Downloads" /></a>                 |
 
 ## Device
 
@@ -81,6 +82,10 @@
 ## Network Information
 
 [See doc](./network-information/README.md)
+
+## Geolocation
+
+[See doc](./geolocation/README.md)
 
 ## Example
 

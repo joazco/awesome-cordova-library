@@ -19,6 +19,7 @@ import {
   Dialogs,
   NetworkInformation,
   NativeAudio,
+  Geolocation,
 } from "./plugins";
 
 const App = () => {
@@ -70,6 +71,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Native Audio">
           <NativeAudio />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="Geolocation">
+          <Geolocation />
         </PluginViewComponent>
       </Grid>
     </Container>

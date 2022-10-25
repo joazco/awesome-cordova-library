@@ -9,6 +9,7 @@
     "@awesome-cordova-library/camera": "^1.0.0",
     "@awesome-cordova-library/device": "^1.0.6",
     "@awesome-cordova-library/dialogs": "^1.0.0",
+    "@awesome-cordova-library/geolocation": "file:.yalc/@awesome-cordova-library/geolocation",
     "@awesome-cordova-library/globalization": "^1.0.0",
     "@awesome-cordova-library/inappbrowser": "^1.0.1",
     "@awesome-cordova-library/nativeaudio": "^1.0.0",
@@ -74,6 +75,7 @@
     "cordova-plugin-camera": "github:apache/cordova-plugin-camera",
     "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-dialogs": "^2.0.2",
+    "cordova-plugin-geolocation": "^4.1.0",
     "cordova-plugin-globalization": "^1.11.0",
     "cordova-plugin-inappbrowser": "^5.0.0",
     "cordova-plugin-nativeaudio": "^3.0.9",
@@ -103,7 +105,10 @@
       "cordova-plugin-dialogs": {},
       "cordova-plugin-camera": {},
       "cordova-plugin-network-information": {},
-      "cordova-plugin-nativeaudio": {}
+      "cordova-plugin-nativeaudio": {},
+      "cordova-plugin-geolocation": {
+        "GPS_REQUIRED": "true"
+      }
     },
     "platforms": [
       "ios"
