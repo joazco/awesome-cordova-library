@@ -42,7 +42,7 @@ class Camera {
 ```typescript
 import Camera, { DestinationType } from '@awesome-cordova-library/camera';
 
-BatteryStatus.getPicture(
+Camera.getPicture(
   (imageData) => console.log(imageData),
   (messageError) => console.log(messageError),
   { destinationType: DestinationType.DATA_URL },
