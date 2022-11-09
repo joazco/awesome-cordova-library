@@ -1,0 +1,58 @@
+{
+  "name": "@awesome-cordova-library/onesignal",
+  "version": "1.0.0",
+  "description": "OneSignal is a free email, sms, push notification, and in-app message service for mobile apps. This plugin makes it easy to integrate your Cordova based (e.g. Ionic, PhoneGap, and PhoneGap Build app with OneSignal.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "keywords": [
+    "cordova",
+    "capacitor",
+    "ionic",
+    "javascript",
+    "mobile",
+    "geolocation",
+    "location",
+    "reactjs"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib/",
+    "LICENSE"
+  ],
+  "author": "Jordan AZOULAY <jazoulay@joazco.com> (https://github.com/joazco)",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joazco/awesome-cordova-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joazco/awesome-cordova-library/issues"
+  },
+  "homepage": "https://github.com/joazco/awesome-cordova-library",
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "@types/react": "~17.0.21",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "^28.0.3",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.7.2"
+  },
+  "scripts": {
+    "build": "rm -rf lib/ && tsc",
+    "build-yalc": "npm run build; yalc publish --push --private",
+    "test": "jest --config jestconfig.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepublish": "npm run format; npm run lint; npm test; npm run build"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "onesignal-cordova-plugin": "^3.2.0"
+  }
+}
