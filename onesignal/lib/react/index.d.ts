@@ -3,7 +3,7 @@ import { LogLevel, InAppMessageAction, InAppMessageLifecycleHandlerObject, Opene
  * @author AZOULAY Jordan<jazoulay@joazco.com>
  * @requires module:onesignal-cordova-plugin
  */
-declare const useOnesignal: (appId: string) => {
+declare const useOnesignal: (_appId: string) => {
     setAppId: (appId: string) => void;
     setNotificationWillShowInForegroundHandler: (handler: (event: NotificationReceivedEvent) => void) => void;
     setNotificationOpenedHandler: (handler: (openedEvent: OpenedEvent) => void) => void;
@@ -36,10 +36,10 @@ declare const useOnesignal: (appId: string) => {
     }) => void) => void;
     setRequiresUserPrivacyConsent: (required: boolean) => void;
     provideUserConsent: (granted: boolean) => void;
-    setEmail: (email: string, authCode?: string) => Promise<unknown>;
-    logoutEmail: () => Promise<unknown>;
-    setSMSNumber: (smsNumber: string, authCode?: string) => Promise<unknown>;
-    logoutSMSNumber: () => Promise<unknown>;
+    setEmail: (email: string, authCode?: string) => Promise<void>;
+    logoutEmail: () => Promise<void>;
+    setSMSNumber: (smsNumber: string, authCode?: string) => Promise<void>;
+    logoutSMSNumber: () => Promise<void>;
     setExternalUserId: (externalId: string | null, handlerOrAuth?: string | ((results: object) => void) | undefined, handler?: ((results: object) => void) | undefined) => void;
     removeExternalUserId: (handler: (results: object) => void) => void;
     addTriggers: (triggers: {

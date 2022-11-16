@@ -18,7 +18,7 @@ import Onesignal, {
  * @author AZOULAY Jordan<jazoulay@joazco.com>
  * @requires module:onesignal-cordova-plugin
  */
-const useOnesignal = (appId: string) => {
+const useOnesignal = (_appId: string) => {
   const setAppId = useCallback((appId: string) => {
     Onesignal.setAppId(appId);
   }, []);
@@ -112,16 +112,16 @@ const useOnesignal = (appId: string) => {
   const provideUserConsent = useCallback((granted: boolean) => {
     Onesignal.provideUserConsent(granted);
   }, []);
-  const setEmail = useCallback((email: string, authCode?: string) => {
+  const setEmail = useCallback((email: string, authCode?: string): Promise<void> => {
     return new Promise((resolve, reject) => Onesignal.setEmail(email, authCode, resolve, reject));
   }, []);
-  const logoutEmail = useCallback(() => {
+  const logoutEmail = useCallback((): Promise<void> => {
     return new Promise((resolve, reject) => Onesignal.logoutEmail(resolve, reject));
   }, []);
-  const setSMSNumber = useCallback((smsNumber: string, authCode?: string) => {
+  const setSMSNumber = useCallback((smsNumber: string, authCode?: string): Promise<void> => {
     return new Promise((resolve, reject) => Onesignal.setSMSNumber(smsNumber, authCode, resolve, reject));
   }, []);
-  const logoutSMSNumber = useCallback(() => {
+  const logoutSMSNumber = useCallback((): Promise<void> => {
     return new Promise((resolve, reject) => Onesignal.logoutSMSNumber(resolve, reject));
   }, []);
   const setExternalUserId = useCallback(
@@ -178,8 +178,8 @@ const useOnesignal = (appId: string) => {
   }, []);
 
   useEffect(() => {
-    setAppId(appId);
-  }, [appId]);
+    setAppId(_appId);
+  }, [_appId]);
 
   return {
     setAppId,

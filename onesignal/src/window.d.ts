@@ -40,10 +40,10 @@ interface Window {
       requiresUserPrivacyConsent: (handler: (response: boolean | { value: boolean }) => void) => void;
       setRequiresUserPrivacyConsent: (required: boolean) => void;
       provideUserConsent: (granted: boolean) => void;
-      setEmail: (email: string, authCode?: string, onSuccess?: Function, onFailure?: Function) => void;
-      logoutEmail: (onSuccess?: Function, onFailure?: Function) => void;
-      setSMSNumber: (smsNumber: string, authCode?: string, onSuccess?: Function, onFailure?: Function) => void;
-      logoutSMSNumber: (onSuccess?: Function, onFailure?: Function) => void;
+      setEmail: (email: string, authCode?: string, onSuccess?: () => void, onFailure?: () => void) => void;
+      logoutEmail: (onSuccess?: () => void, onFailure?: () => void) => void;
+      setSMSNumber: (smsNumber: string, authCode?: string, onSuccess?: () => void, onFailure?: () => void) => void;
+      logoutSMSNumber: (onSuccess?: () => void, onFailure?: () => void) => void;
       setExternalUserId: (
         externalId: string | null,
         handlerOrAuth?: ((results: object) => void) | string,

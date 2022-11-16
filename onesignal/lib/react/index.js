@@ -6,7 +6,7 @@ var __1 = require("../");
  * @author AZOULAY Jordan<jazoulay@joazco.com>
  * @requires module:onesignal-cordova-plugin
  */
-var useOnesignal = function (appId) {
+var useOnesignal = function (_appId) {
     var setAppId = (0, react_1.useCallback)(function (appId) {
         __1.default.setAppId(appId);
     }, []);
@@ -146,8 +146,8 @@ var useOnesignal = function (appId) {
         __1.default.isLocationShared(handler);
     }, []);
     (0, react_1.useEffect)(function () {
-        setAppId(appId);
-    }, [appId]);
+        setAppId(_appId);
+    }, [_appId]);
     return {
         setAppId: setAppId,
         setNotificationWillShowInForegroundHandler: setNotificationWillShowInForegroundHandler,

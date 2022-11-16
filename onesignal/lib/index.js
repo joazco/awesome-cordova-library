@@ -365,8 +365,8 @@ var Onesignal = /** @class */ (function () {
      * Allows you to set the user's email address with the OneSignal SDK.
      * @param  {string} email
      * @param  {string} authCode
-     * @param  {Function} onSuccess
-     * @param  {Function} onFailure
+     * @param  {() => void} onSuccess
+     * @param  {() => void} onFailure
      * @returns void
      */
     Onesignal.setEmail = function (email, authCode, onSuccess, onFailure) {
@@ -377,9 +377,9 @@ var Onesignal = /** @class */ (function () {
         window.plugins.OneSignal.setEmail(email, authCode, onSuccess, onFailure);
     };
     /**
-     * If your app implements logout functionality, you can call logoutEmail to dissociate the email from the device.
-     * @param  {Function} onSuccess
-     * @param  {Function} onFailure
+     * If your app implements logout () => voidality, you can call logoutEmail to dissociate the email from the device.
+     * @param  {() => void} onSuccess
+     * @param  {() => void} onFailure
      * @returns void
      */
     Onesignal.logoutEmail = function (onSuccess, onFailure) {
@@ -393,8 +393,8 @@ var Onesignal = /** @class */ (function () {
      * Allows you to set the user's SMS number with the OneSignal SDK.
      * @param  {string} smsNumber
      * @param  {string} authCode
-     * @param  {Function} onSuccess
-     * @param  {Function} onFailure
+     * @param  {() => void} onSuccess
+     * @param  {() => void} onFailure
      * @returns void
      */
     Onesignal.setSMSNumber = function (smsNumber, authCode, onSuccess, onFailure) {
@@ -405,9 +405,9 @@ var Onesignal = /** @class */ (function () {
         window.plugins.OneSignal.setSMSNumber(smsNumber, authCode, onSuccess, onFailure);
     };
     /**
-     * If your app implements logout functionality, you can call logoutSMSNumber to dissociate the SMS number from the device.
-     * @param  {Function} onSuccess
-     * @param  {Function} onFailure
+     * If your app implements logout () => voidality, you can call logoutSMSNumber to dissociate the SMS number from the device.
+     * @param  {() => void} onSuccess
+     * @param  {() => void} onFailure
      * @returns void
      */
     Onesignal.logoutSMSNumber = function (onSuccess, onFailure) {
@@ -420,10 +420,10 @@ var Onesignal = /** @class */ (function () {
     /**
      * Allows you to use your own system's user ID's to send push notifications to your users.
      *
-     * Possible function usages:
+     * Possible () => void usages:
      * setExternalUserId(externalId: string?): void
-     * setExternalUserId(externalId: string?, handler: function?): void
-     * setExternalUserId(externalId: string?, externalIdAuthCode: string?, handler: function?): void
+     * setExternalUserId(externalId: string?, handler: () => void?): void
+     * setExternalUserId(externalId: string?, externalIdAuthCode: string?, handler: () => void?): void
      *
      * @param  {string} externalId
      * @param  {string} externalIdAuthCode

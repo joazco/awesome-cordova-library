@@ -412,11 +412,11 @@ export default class Onesignal {
    * Allows you to set the user's email address with the OneSignal SDK.
    * @param  {string} email
    * @param  {string} authCode
-   * @param  {Function} onSuccess
-   * @param  {Function} onFailure
+   * @param  {() => void} onSuccess
+   * @param  {() => void} onFailure
    * @returns void
    */
-  static setEmail(email: string, authCode?: string, onSuccess?: Function, onFailure?: Function): void {
+  static setEmail(email: string, authCode?: string, onSuccess?: () => void, onFailure?: () => void): void {
     if (typeof window.plugins === 'undefined' || typeof window.plugins.OneSignal === 'undefined') {
       Onesignal.warnPluginIsUnInstallOrIncompatible();
       return;
@@ -425,12 +425,12 @@ export default class Onesignal {
   }
 
   /**
-   * If your app implements logout functionality, you can call logoutEmail to dissociate the email from the device.
-   * @param  {Function} onSuccess
-   * @param  {Function} onFailure
+   * If your app implements logout () => voidality, you can call logoutEmail to dissociate the email from the device.
+   * @param  {() => void} onSuccess
+   * @param  {() => void} onFailure
    * @returns void
    */
-  static logoutEmail(onSuccess?: Function, onFailure?: Function): void {
+  static logoutEmail(onSuccess?: () => void, onFailure?: () => void): void {
     if (typeof window.plugins === 'undefined' || typeof window.plugins.OneSignal === 'undefined') {
       Onesignal.warnPluginIsUnInstallOrIncompatible();
       return;
@@ -442,11 +442,11 @@ export default class Onesignal {
    * Allows you to set the user's SMS number with the OneSignal SDK.
    * @param  {string} smsNumber
    * @param  {string} authCode
-   * @param  {Function} onSuccess
-   * @param  {Function} onFailure
+   * @param  {() => void} onSuccess
+   * @param  {() => void} onFailure
    * @returns void
    */
-  static setSMSNumber(smsNumber: string, authCode?: string, onSuccess?: Function, onFailure?: Function): void {
+  static setSMSNumber(smsNumber: string, authCode?: string, onSuccess?: () => void, onFailure?: () => void): void {
     if (typeof window.plugins === 'undefined' || typeof window.plugins.OneSignal === 'undefined') {
       Onesignal.warnPluginIsUnInstallOrIncompatible();
       return;
@@ -455,12 +455,12 @@ export default class Onesignal {
   }
 
   /**
-   * If your app implements logout functionality, you can call logoutSMSNumber to dissociate the SMS number from the device.
-   * @param  {Function} onSuccess
-   * @param  {Function} onFailure
+   * If your app implements logout () => voidality, you can call logoutSMSNumber to dissociate the SMS number from the device.
+   * @param  {() => void} onSuccess
+   * @param  {() => void} onFailure
    * @returns void
    */
-  static logoutSMSNumber(onSuccess?: Function, onFailure?: Function): void {
+  static logoutSMSNumber(onSuccess?: () => void, onFailure?: () => void): void {
     if (typeof window.plugins === 'undefined' || typeof window.plugins.OneSignal === 'undefined') {
       Onesignal.warnPluginIsUnInstallOrIncompatible();
       return;
@@ -471,10 +471,10 @@ export default class Onesignal {
   /**
    * Allows you to use your own system's user ID's to send push notifications to your users.
    *
-   * Possible function usages:
+   * Possible () => void usages:
    * setExternalUserId(externalId: string?): void
-   * setExternalUserId(externalId: string?, handler: function?): void
-   * setExternalUserId(externalId: string?, externalIdAuthCode: string?, handler: function?): void
+   * setExternalUserId(externalId: string?, handler: () => void?): void
+   * setExternalUserId(externalId: string?, externalIdAuthCode: string?, handler: () => void?): void
    *
    * @param  {string} externalId
    * @param  {string} externalIdAuthCode
