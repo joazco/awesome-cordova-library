@@ -1,4 +1,3 @@
-import { LogLevel } from 'onesignal-cordova-plugin';
 import {
   InAppMessageAction,
   InAppMessageLifecycleHandlerObject,
@@ -14,6 +13,7 @@ import {
   SMSSubscriptionChange,
   SubscriptionChange,
 } from 'onesignal-cordova-plugin/dist/Subscription';
+type LogLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 
 /**
  * @author AZOULAY Jordan<jazoulay@joazco.com>

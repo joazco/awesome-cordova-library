@@ -1,9 +1,9 @@
-import { LogLevel } from 'onesignal-cordova-plugin';
 import { InAppMessageAction, InAppMessageLifecycleHandlerObject } from 'onesignal-cordova-plugin/dist/models/InAppMessage';
 import { OpenedEvent } from 'onesignal-cordova-plugin/dist/models/NotificationOpened';
 import { OutcomeEvent } from 'onesignal-cordova-plugin/dist/models/Outcomes';
 import NotificationReceivedEvent from 'onesignal-cordova-plugin/dist/NotificationReceivedEvent';
 import { ChangeEvent, DeviceState, EmailSubscriptionChange, PermissionChange, SMSSubscriptionChange, SubscriptionChange } from 'onesignal-cordova-plugin/dist/Subscription';
+declare type LogLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 /**
  * @author AZOULAY Jordan<jazoulay@joazco.com>
  * @requires module:onesignal-cordova-plugin
