@@ -1,26 +1,24 @@
-import { LogLevel } from 'onesignal-cordova-plugin';
-import {
+import { useCallback, useEffect } from 'react';
+import Onesignal, {
+  LogLevel,
   InAppMessageAction,
   InAppMessageLifecycleHandlerObject,
-} from 'onesignal-cordova-plugin/dist/models/InAppMessage';
-import { OpenedEvent } from 'onesignal-cordova-plugin/dist/models/NotificationOpened';
-import NotificationReceivedEvent from 'onesignal-cordova-plugin/dist/NotificationReceivedEvent';
-import {
+  OpenedEvent,
+  OutcomeEvent,
+  NotificationReceivedEvent,
   ChangeEvent,
   DeviceState,
   EmailSubscriptionChange,
   PermissionChange,
   SMSSubscriptionChange,
   SubscriptionChange,
-} from 'onesignal-cordova-plugin/dist/Subscription';
-import { useCallback } from 'react';
-import Onesignal from '../';
+} from '../';
 
 /**
  * @author AZOULAY Jordan<jazoulay@joazco.com>
  * @requires module:onesignal-cordova-plugin
  */
-const useOnesignal = () => {
+const useOnesignal = (appId: string) => {
   const setAppId = useCallback((appId: string) => {
     Onesignal.setAppId(appId);
   }, []);
@@ -111,6 +109,77 @@ const useOnesignal = () => {
   const setRequiresUserPrivacyConsent = useCallback((required: boolean) => {
     Onesignal.setRequiresUserPrivacyConsent(required);
   }, []);
+  const provideUserConsent = useCallback((granted: boolean) => {
+    Onesignal.provideUserConsent(granted);
+  }, []);
+  const setEmail = useCallback((email: string, authCode?: string) => {
+    return new Promise((resolve, reject) => Onesignal.setEmail(email, authCode, resolve, reject));
+  }, []);
+  const logoutEmail = useCallback(() => {
+    return new Promise((resolve, reject) => Onesignal.logoutEmail(resolve, reject));
+  }, []);
+  const setSMSNumber = useCallback((smsNumber: string, authCode?: string) => {
+    return new Promise((resolve, reject) => Onesignal.setSMSNumber(smsNumber, authCode, resolve, reject));
+  }, []);
+  const logoutSMSNumber = useCallback(() => {
+    return new Promise((resolve, reject) => Onesignal.logoutSMSNumber(resolve, reject));
+  }, []);
+  const setExternalUserId = useCallback(
+    (
+      externalId: string | null,
+      handlerOrAuth?: ((results: object) => void) | string,
+      handler?: (results: object) => void,
+    ) => {
+      Onesignal.setExternalUserId(externalId, handlerOrAuth, handler);
+    },
+    [],
+  );
+  const removeExternalUserId = useCallback((handler: (results: object) => void) => {
+    Onesignal.removeExternalUserId(handler);
+  }, []);
+  const addTriggers = useCallback((triggers: { [key: string]: string | number | boolean }) => {
+    Onesignal.addTriggers(triggers);
+  }, []);
+  const addTrigger = useCallback((key: string, value: string | number | boolean) => {
+    Onesignal.addTrigger(key, value);
+  }, []);
+  const removeTriggerForKey = useCallback((key: string) => {
+    Onesignal.removeTriggerForKey(key);
+  }, []);
+  const removeTriggersForKeys = useCallback((keys: string[]) => {
+    Onesignal.removeTriggersForKeys(keys);
+  }, []);
+  const getTriggerValueForKey = useCallback((key: string, handler: (value: string) => void) => {
+    Onesignal.getTriggerValueForKey(key, handler);
+  }, []);
+  const pauseInAppMessages = useCallback((pause: boolean) => {
+    Onesignal.pauseInAppMessages(pause);
+  }, []);
+  const sendOutcome = useCallback((name: string, handler?: (event: OutcomeEvent) => void) => {
+    Onesignal.sendOutcome(name, handler);
+  }, []);
+  const sendUniqueOutcome = useCallback((name: string, handler?: (event: OutcomeEvent) => void) => {
+    Onesignal.sendUniqueOutcome(name, handler);
+  }, []);
+  const sendOutcomeWithValue = useCallback(
+    (name: string, value: string | number, handler?: (event: OutcomeEvent) => void) => {
+      Onesignal.sendOutcomeWithValue(name, value, handler);
+    },
+    [],
+  );
+  const promptLocation = useCallback(() => {
+    Onesignal.promptLocation();
+  }, []);
+  const setLocationShared = useCallback((shared: boolean) => {
+    Onesignal.setLocationShared(shared);
+  }, []);
+  const isLocationShared = useCallback((handler: (response: boolean | { value: boolean }) => void) => {
+    Onesignal.isLocationShared(handler);
+  }, []);
+
+  useEffect(() => {
+    setAppId(appId);
+  }, [appId]);
 
   return {
     setAppId,
@@ -140,6 +209,25 @@ const useOnesignal = () => {
     userProvidedPrivacyConsent,
     requiresUserPrivacyConsent,
     setRequiresUserPrivacyConsent,
+    provideUserConsent,
+    setEmail,
+    logoutEmail,
+    setSMSNumber,
+    logoutSMSNumber,
+    setExternalUserId,
+    removeExternalUserId,
+    addTriggers,
+    addTrigger,
+    removeTriggerForKey,
+    removeTriggersForKeys,
+    getTriggerValueForKey,
+    pauseInAppMessages,
+    sendOutcome,
+    sendUniqueOutcome,
+    sendOutcomeWithValue,
+    promptLocation,
+    setLocationShared,
+    isLocationShared,
   };
 };
 

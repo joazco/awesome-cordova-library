@@ -10,8 +10,9 @@
     "ionic",
     "javascript",
     "mobile",
-    "geolocation",
-    "location",
+    "notification",
+    "push",
+    "notification push",
     "reactjs"
   ],
   "publishConfig": {

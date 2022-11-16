@@ -1,6 +1,5 @@
-import { beforeEach, expect, test } from '@jest/globals';
-import Onesignal from '../src';
+import { beforeEach, test } from '@jest/globals';
 
 beforeEach(() => {});
 
-test('Test current position', () => {});
+test('', () => {});

@@ -674,3 +674,18 @@ export default class Onesignal {
     console.warn('Onesignal is uninstalled or incompatible with current platform');
   }
 }
+
+export {
+  LogLevel,
+  InAppMessageAction,
+  InAppMessageLifecycleHandlerObject,
+  OpenedEvent,
+  OutcomeEvent,
+  NotificationReceivedEvent,
+  ChangeEvent,
+  DeviceState,
+  EmailSubscriptionChange,
+  PermissionChange,
+  SMSSubscriptionChange,
+  SubscriptionChange,
+};
