@@ -32,6 +32,10 @@
 
 [See doc](./localStorage/README.md)
 
+## Media
+
+[See doc](./media/README.md)
+
 ## Native Audio
 
 [See doc](./nativeaudio/README.md)
