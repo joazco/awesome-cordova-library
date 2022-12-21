@@ -7,12 +7,13 @@
   "dependencies": {
     "@awesome-cordova-library/batterystatus": "^1.0.0",
     "@awesome-cordova-library/camera": "^1.0.0",
-    "@awesome-cordova-library/device": "^1.0.6",
+    "@awesome-cordova-library/device": "^1.0.7",
     "@awesome-cordova-library/dialogs": "^1.0.0",
     "@awesome-cordova-library/geolocation": "file:.yalc/@awesome-cordova-library/geolocation",
     "@awesome-cordova-library/globalization": "^1.0.0",
     "@awesome-cordova-library/inappbrowser": "^1.0.1",
     "@awesome-cordova-library/nativeaudio": "^1.0.0",
+    "@awesome-cordova-library/navigationbar": "^1.0.0",
     "@awesome-cordova-library/network-information": "^1.0.0",
     "@awesome-cordova-library/ratedialog": "^1.0.5",
     "@awesome-cordova-library/screen-orientation": "^1.0.1",
@@ -79,6 +80,7 @@
     "cordova-plugin-globalization": "^1.11.0",
     "cordova-plugin-inappbrowser": "^5.0.0",
     "cordova-plugin-nativeaudio": "^3.0.9",
+    "cordova-plugin-navigationbar": "^1.0.31",
     "cordova-plugin-network-information": "^3.0.0",
     "cordova-plugin-screen-orientation": "^3.0.2",
     "cordova-plugin-splashscreen": "^6.0.2",
@@ -108,7 +110,8 @@
       "cordova-plugin-nativeaudio": {},
       "cordova-plugin-geolocation": {
         "GPS_REQUIRED": "true"
-      }
+      },
+      "cordova-plugin-navigationbar": {}
     },
     "platforms": [
       "ios"

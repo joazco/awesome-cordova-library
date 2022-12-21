@@ -20,6 +20,7 @@ import {
   NetworkInformation,
   NativeAudio,
   Geolocation,
+  Navigationbar,
 } from "./plugins";
 
 const App = () => {
@@ -74,6 +75,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Geolocation">
           <Geolocation />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="Navigationbar">
+          <Navigationbar />
         </PluginViewComponent>
       </Grid>
     </Container>
