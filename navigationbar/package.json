@@ -1,7 +1,7 @@
 {
-  "name": "@awesome-cordova-library/device",
-  "version": "1.0.7",
-  "description": "This plugin defines a global device object, which describes the device's hardware and software. Although the object is in the global scope, it is not available until after the deviceready event.",
+  "name": "@awesome-cordova-library/navigationbar",
+  "version": "1.0.0",
+  "description": "Hide and auto hide navigation bar. (Android)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "keywords": [
@@ -10,8 +10,8 @@
     "ionic",
     "javascript",
     "mobile",
-    "device",
-    "device info"
+    "navigationbar",
+    "android"
   ],
   "publishConfig": {
     "access": "public"

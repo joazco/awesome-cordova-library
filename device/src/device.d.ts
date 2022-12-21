@@ -9,7 +9,7 @@ interface Device {
    */
   model: string;
   /** Get the device's operating system name. */
-  platform: string;
+  platform: 'Android' | 'BlackBerry 10' | 'browser' | 'iOS' | 'WinCE' | 'Tizen' | 'Mac OS X';
   /** Get the device's Universally Unique Identifier (UUID). */
   uuid: string;
   /** Get the operating system version. */

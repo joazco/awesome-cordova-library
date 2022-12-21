@@ -36,7 +36,7 @@ const useDevice = () => {
    *   - "Mac OS X"
    * @returns {string}
    */
-  const getPlatform = useCallback((): string => {
+  const getPlatform = useCallback(() => {
     return Device.getPlatform();
   }, []);
 

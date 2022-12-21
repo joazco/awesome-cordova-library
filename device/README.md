@@ -18,7 +18,7 @@ npm i @awesome-cordova-library/device
 ```typescript
 class Device {
   static getModel(): string;
-  static getPlatform(): string;
+  static getPlatform(): 'browser' | 'Android' | 'BlackBerry 10' | 'iOS' | 'WinCE' | 'Tizen' | 'Mac OS X';
   static getVersion(): string;
   static getUuid(): string | null;
   static getManufacturer(): string | null;
@@ -46,7 +46,7 @@ Device.getIsVirtual();
 ```typescript
 const useDevice: () => {
   getModel: () => string;
-  getPlatform: () => string;
+  getPlatform: () => 'browser' | 'Android' | 'BlackBerry 10' | 'iOS' | 'WinCE' | 'Tizen' | 'Mac OS X';
   getUuid: () => string | null;
   getVersion: () => string | null;
   getManufacturer: () => string | null;

@@ -23,6 +23,7 @@
 | **Network Information** | [`@awesome-cordova-library/network-information`](https://www.npmjs.com/package/@awesome-cordova-library/network-information) | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/network-information/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/network-information) | <a href="https://www.npmjs.com/package/@awesome-cordova-library/network-information" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/network-information.svg" alt="NPM Downloads" /></a> |
 | **Geolocation**         | [`@awesome-cordova-library/geolocation`](https://www.npmjs.com/package/@awesome-cordova-library/geolocation)                 | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/geolocation/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/geolocation)                 | <a href="https://www.npmjs.com/package/@awesome-cordova-library/geolocation" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/geolocation.svg" alt="NPM Downloads" /></a>                 |
 | **Onesignal**           | [`@awesome-cordova-library/onesignal`](https://www.npmjs.com/package/@awesome-cordova-library/onesignal)                     | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/onesignal/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/onesignal)                     | <a href="https://www.npmjs.com/package/@awesome-cordova-library/onesignal" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/onesignal.svg" alt="NPM Downloads" /></a>                     |
+| **Navigationbar**       | [`@awesome-cordova-library/navigationbar`](https://www.npmjs.com/package/@awesome-cordova-library/navigationbar)             | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/navigationbar/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/navigationbar)             | <a href="https://www.npmjs.com/package/@awesome-cordova-library/navigationbar" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/navigationbar.svg" alt="NPM Downloads" /></a>             |
 
 ## Device
 
@@ -95,6 +96,10 @@
 ## Onesignal
 
 [See doc](./onesignal/README.md)
+
+## NavigationBar
+
+[See doc](./navigationbar/README.md)
 
 ## Example
 
