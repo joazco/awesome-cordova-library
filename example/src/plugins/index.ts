@@ -13,3 +13,4 @@ export { default as Dialogs } from "./Dialogs";
 export { default as NetworkInformation } from "./NetworkInformation";
 export { default as NativeAudio } from "./NativeAudio";
 export { default as Geolocation } from "./Geolocation";
+export { default as Shake } from "./Shake";

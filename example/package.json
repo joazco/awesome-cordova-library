@@ -16,6 +16,7 @@
     "@awesome-cordova-library/network-information": "^1.0.0",
     "@awesome-cordova-library/ratedialog": "^1.0.5",
     "@awesome-cordova-library/screen-orientation": "^1.0.1",
+    "@awesome-cordova-library/shake": "^1.0.0",
     "@awesome-cordova-library/social-sharing": "^1.0.0",
     "@awesome-cordova-library/splashscreen": "^1.0.0",
     "@awesome-cordova-library/statusbar": "^1.0.0",
@@ -81,6 +82,7 @@
     "cordova-plugin-nativeaudio": "^3.0.9",
     "cordova-plugin-network-information": "^3.0.0",
     "cordova-plugin-screen-orientation": "^3.0.2",
+    "cordova-plugin-shake": "^0.7.0",
     "cordova-plugin-splashscreen": "^6.0.2",
     "cordova-plugin-statusbar": "^3.0.0",
     "cordova-plugin-vibration": "^3.1.1",
@@ -108,7 +110,8 @@
       "cordova-plugin-nativeaudio": {},
       "cordova-plugin-geolocation": {
         "GPS_REQUIRED": "true"
-      }
+      },
+      "cordova-plugin-shake": {}
     },
     "platforms": [
       "ios"
