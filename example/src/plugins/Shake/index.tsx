@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { Container, Grid, Button, Select } from "semantic-ui-react";
+import React, { useEffect, useState } from "react";
+import { Container, Grid } from "semantic-ui-react";
 import useShake from "@awesome-cordova-library/shake/lib/react";
 
 const Shake: React.FC = () => {

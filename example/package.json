@@ -9,7 +9,7 @@
     "@awesome-cordova-library/camera": "^1.0.0",
     "@awesome-cordova-library/device": "^1.0.6",
     "@awesome-cordova-library/dialogs": "^1.0.0",
-    "@awesome-cordova-library/geolocation": "file:.yalc/@awesome-cordova-library/geolocation",
+    "@awesome-cordova-library/geolocation": "^1.0.0",
     "@awesome-cordova-library/globalization": "^1.0.0",
     "@awesome-cordova-library/inappbrowser": "^1.0.1",
     "@awesome-cordova-library/nativeaudio": "^1.0.0",
@@ -20,6 +20,7 @@
     "@awesome-cordova-library/social-sharing": "^1.0.0",
     "@awesome-cordova-library/splashscreen": "^1.0.0",
     "@awesome-cordova-library/statusbar": "^1.0.0",
+    "@awesome-cordova-library/taptic-engine": "^1.0.0",
     "@awesome-cordova-library/vibration": "^1.0.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -85,6 +86,7 @@
     "cordova-plugin-shake": "^0.7.0",
     "cordova-plugin-splashscreen": "^6.0.2",
     "cordova-plugin-statusbar": "^3.0.0",
+    "cordova-plugin-taptic-engine": "^2.2.0",
     "cordova-plugin-vibration": "^3.1.1",
     "cordova-plugin-x-socialsharing": "^6.0.4",
     "cordova-res": "^0.15.4",
@@ -111,7 +113,8 @@
       "cordova-plugin-geolocation": {
         "GPS_REQUIRED": "true"
       },
-      "cordova-plugin-shake": {}
+      "cordova-plugin-shake": {},
+      "cordova-plugin-taptic-engine": {}
     },
     "platforms": [
       "ios"

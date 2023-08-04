@@ -21,6 +21,7 @@ import {
   NativeAudio,
   Geolocation,
   Shake,
+  TapticEngine,
 } from "./plugins";
 
 const App = () => {
@@ -78,6 +79,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="Shake">
           <Shake />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="TapticEngineIos">
+          <TapticEngine />
         </PluginViewComponent>
       </Grid>
     </Container>
