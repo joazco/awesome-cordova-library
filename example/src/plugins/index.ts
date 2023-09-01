@@ -15,3 +15,4 @@ export { default as NativeAudio } from "./NativeAudio";
 export { default as Geolocation } from "./Geolocation";
 export { default as Shake } from "./Shake";
 export { default as TapticEngine } from "./TapticEngine";
+export { default as AppVersion } from "./AppVersion";

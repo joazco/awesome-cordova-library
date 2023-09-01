@@ -22,6 +22,7 @@ import {
   Geolocation,
   Shake,
   TapticEngine,
+  AppVersion,
 } from "./plugins";
 
 const App = () => {
@@ -82,6 +83,9 @@ const App = () => {
         </PluginViewComponent>
         <PluginViewComponent pluginName="TapticEngineIos">
           <TapticEngine />
+        </PluginViewComponent>
+        <PluginViewComponent pluginName="AppVersion">
+          <AppVersion />
         </PluginViewComponent>
       </Grid>
     </Container>

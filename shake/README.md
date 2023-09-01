@@ -19,6 +19,8 @@ Apache Cordova / PhoneGap Plugin to detect when a physical device performs a sha
 For iOS, the plugin uses the native shake detection.
 Fo all other platforms, it is based on a standalone JavaScript implementation.
 
+[Online documentation](https://awesomecordovalibrary.com)
+
 [Github documentation](https://github.com/leecrossley/cordova-plugin-shake)
 
 ## Installation

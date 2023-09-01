@@ -60,10 +60,17 @@ const defaultAuthor = (data) => {
 const generateConfigJSONFromTypescript = () => {
   return new Promise((resolve, reject) => {
     exec(
-      "./node_modules/typescript/bin/tsc config.ts --outDir hooks/modules",
+      `node ${path.resolve(
+        __dirname,
+        "../../node_modules/typescript/bin/tsc config.ts --skipLibCheck --outDir hooks/modules"
+      )}`,
       (error) => {
         if (error) {
-          reject();
+          reject(
+            `File hooks/modules/copyconfig.js line 60.
+             \nError to build config.ts.
+             \nError: ${error}`
+          );
           return;
         }
         const data = require("./config.js").default;
@@ -83,18 +90,30 @@ const generateConfigJSONFromTypescript = () => {
 };
 
 const copyFiles = () => {
-  fs.copyFileSync(
-    path.resolve(__dirname, "../../config.json"),
-    path.resolve(__dirname, "../../src/config.json")
-  );
+  try {
+    fs.copyFileSync(
+      path.resolve(__dirname, "../../config.json"),
+      path.resolve(__dirname, "../../src/config.json")
+    );
+  } catch (error) {
+    throw new Error(
+      `File hooks/modules/copyconfig.js line 88. 
+      \nError to build copy config.js on src folder.
+      \nError: ${error}`
+    );
+  }
 };
 
 const execCopyConfig = () => {
-  if (fs.existsSync(path.resolve(__dirname, "../../config.ts"))) {
-    return generateConfigJSONFromTypescript().then(copyFiles);
-  } else {
-    copyFiles();
-    return Promise.resolve();
+  try {
+    if (fs.existsSync(path.resolve(__dirname, "../../config.ts"))) {
+      return generateConfigJSONFromTypescript().then(copyFiles);
+    } else {
+      copyFiles();
+      return Promise.resolve();
+    }
+  } catch (error) {
+    return Promise.reject(error);
   }
 };
 

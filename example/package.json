@@ -5,6 +5,7 @@
   "description": "Sample project start with react typescript 18.* and cordova",
   "homepage": "./",
   "dependencies": {
+    "@awesome-cordova-library/appversion": "^1.0.0",
     "@awesome-cordova-library/batterystatus": "^1.0.0",
     "@awesome-cordova-library/camera": "^1.0.0",
     "@awesome-cordova-library/device": "^1.0.6",
@@ -46,7 +47,8 @@
     "start": "react-scripts start",
     "build": "npm run prestart && react-scripts build",
     "test": "npm run prestart && react-scripts test",
-    "eject": "npm run prestart && react-scripts eject"
+    "eject": "npm run prestart && react-scripts eject",
+    "build-config": "tsc --skipLibCheck config.ts"
   },
   "keywords": [
     "ecosystem:cordova"
@@ -73,10 +75,12 @@
   },
   "devDependencies": {
     "cordova-ios": "^6.2.0",
+    "cordova-plugin-app-version": "^0.1.14",
     "cordova-plugin-battery-status": "^2.0.3",
     "cordova-plugin-camera": "github:apache/cordova-plugin-camera",
     "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-dialogs": "^2.0.2",
+    "cordova-plugin-file": "^7.0.0",
     "cordova-plugin-geolocation": "^4.1.0",
     "cordova-plugin-globalization": "^1.11.0",
     "cordova-plugin-inappbrowser": "^5.0.0",
@@ -116,10 +120,12 @@
       },
       "cordova-plugin-shake": {},
       "cordova-plugin-taptic-engine": {},
-      "cordova-plugin-media": {}
+      "cordova-plugin-media": {},
+      "cordova-plugin-app-version": {}
     },
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }
