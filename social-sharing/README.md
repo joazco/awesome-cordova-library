@@ -1,14 +1,40 @@
-# @awesome-cordova-library/social-sharing
+---
+id: plugin-social-sharing
+title: Social Sharing
+tags:
+  - cordova
+  - capacitor
+  - ionic
+  - javascript
+  - typescript
+  - plugin
+  - mobile
+  - social sharing
+---
+
+# Social Sharing
 
 This plugin allows you to use the native sharing window of your mobile device.
+
+[Online documentation](https://awesomecordovalibrary.com)
 
 [Github documentation](https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
 
 ## Installation
 
+### Cordova
+
 ```sh
 cordova plugin add cordova-plugin-x-socialsharing
-npm i @awesome-cordova-library/social-sharing
+npm install @awesome-cordova-library/social-sharing
+```
+
+### Capacitor / Ionic
+
+```bash
+npm install cordova-plugin-x-socialsharing
+npm install @awesome-cordova-library/social-sharing
+npx cap sync
 ```
 
 ## Vanilla
@@ -18,7 +44,11 @@ npm i @awesome-cordova-library/social-sharing
 ```typescript
 class SocialSharing {
   static setIPadPopupCoordinates(coords: string): void;
-  static shareWithOptions(options: any, successCallback: () => void, errorCallback: () => void): void;
+  static shareWithOptions(
+    options: any,
+    successCallback: () => void,
+    errorCallback: () => void
+  ): void;
   static share(
     message: string,
     subject: string | null,
@@ -26,7 +56,7 @@ class SocialSharing {
     url: string | null,
     iPadCoordinates: any,
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
   static shareWeb(options: ShareData): Promise<void>;
   static clipboardWriteText(message: string): Promise<void>;
@@ -35,14 +65,14 @@ class SocialSharing {
     file: string | null,
     url: string | null,
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
   static shareViaFacebook(
     message: string,
     fileOrFileArray: string | string | null,
     url: string | null,
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
   static shareViaFacebookWithPasteMessageHint(
     message: string,
@@ -50,14 +80,14 @@ class SocialSharing {
     url: string | null,
     pasteMessageHint: string | null,
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
   static shareViaWhatsApp(
     message: string,
     fileOrFileArray: string | string | null,
     url: string | null,
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
   static shareViaWhatsAppToReceiver(
     receiver: string,
@@ -65,13 +95,13 @@ class SocialSharing {
     fileOrFileArray: string | string[] | null,
     url: string | null,
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
   static shareViaSMS(
     optionsOrMessage: string | any,
     phonenumbers: string | null,
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
   static shareViaEmail(
     message: string,
@@ -81,7 +111,7 @@ class SocialSharing {
     bccArray: string[] | null,
     fileOrFileArray: string | string[] | null,
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
   static canShareVia(
     via: string,
@@ -90,15 +120,18 @@ class SocialSharing {
     fileOrFileArray: string | string[] | null,
     url: string | null,
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
-  static canShareViaEmail(successCallback: () => void, errorCallback: () => void): void;
+  static canShareViaEmail(
+    successCallback: () => void,
+    errorCallback: () => void
+  ): void;
   static shareViaInstagram(
     message: string,
     fileOrFileArray: string | string | null,
     url: string | null,
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
   static shareVia(
     via: string,
@@ -106,12 +139,12 @@ class SocialSharing {
     subject: string | null,
     fileOrFileArray: string | string[] | null,
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
   static saveToPhotoAlbum(
     fileOrFileArray: string | string[],
     successCallback: () => void,
-    errorCallback: () => void,
+    errorCallback: () => void
   ): void;
   static warnPluginIsUnInstallOrIncompatible(): void;
 }
@@ -135,54 +168,77 @@ SocialSharing.shareViaInstagram('Message via Instagram', 'https://www.google.nl/
 ```typescript
 const useSocialSharing: () => {
   setIPadPopupCoordinates: (coords: string) => void;
-  shareWithOptions: (options: any, successCallback: () => void, errorCallback: () => void) => Promise<void>;
+  shareWithOptions: (
+    options: any,
+    successCallback: () => void,
+    errorCallback: () => void
+  ) => Promise<void>;
   share: (
     message: string,
     subject: string | null,
     fileOrFileArray: string | string[] | null,
     url: string | null,
-    iPadCoordinates: any,
+    iPadCoordinates: any
   ) => Promise<void>;
   shareWeb: (options: ShareData) => Promise<void>;
   clipboardWriteText: (message: string) => Promise<void>;
-  shareViaTwitter: (message: string, file: string | null, url: string | null) => Promise<void>;
-  shareViaFacebook: (message: string, fileOrFileArray: string | string | null, url: string | null) => Promise<void>;
+  shareViaTwitter: (
+    message: string,
+    file: string | null,
+    url: string | null
+  ) => Promise<void>;
+  shareViaFacebook: (
+    message: string,
+    fileOrFileArray: string | string | null,
+    url: string | null
+  ) => Promise<void>;
   shareViaFacebookWithPasteMessageHint: (
     message: string,
     fileOrFileArray: string | string | null,
     url: string | null,
-    pasteMessageHint: string | null,
+    pasteMessageHint: string | null
   ) => Promise<void>;
-  shareViaWhatsApp: (message: string, fileOrFileArray: string | string | null, url: string | null) => Promise<void>;
+  shareViaWhatsApp: (
+    message: string,
+    fileOrFileArray: string | string | null,
+    url: string | null
+  ) => Promise<void>;
   shareViaWhatsAppToReceiver: (
     receiver: string,
     message: string,
     fileOrFileArray: string | string[] | null,
-    url: string | null,
+    url: string | null
   ) => Promise<void>;
-  shareViaSMS: (optionsOrMessage: string | any, phonenumbers: string | null) => Promise<void>;
+  shareViaSMS: (
+    optionsOrMessage: string | any,
+    phonenumbers: string | null
+  ) => Promise<void>;
   shareViaEmail: (
     message: string,
     subject: string,
     toArray: string[],
     ccArray: string[],
     bccArray: string[] | null,
-    fileOrFileArray: string | string[] | null,
+    fileOrFileArray: string | string[] | null
   ) => Promise<void>;
   canShareVia: (
     via: string,
     message: string,
     subject: string | null,
     fileOrFileArray: string | string[] | null,
-    url: string | null,
+    url: string | null
   ) => Promise<void>;
   canShareViaEmail: () => Promise<void>;
-  shareViaInstagram: (message: string, fileOrFileArray: string | string | null, url: string | null) => Promise<void>;
+  shareViaInstagram: (
+    message: string,
+    fileOrFileArray: string | string | null,
+    url: string | null
+  ) => Promise<void>;
   shareVia: (
     via: string,
     message: string,
     subject: string | null,
-    fileOrFileArray: string | string[] | null,
+    fileOrFileArray: string | string[] | null
   ) => Promise<void>;
   saveToPhotoAlbum: (fileOrFileArray: string | string[]) => Promise<void>;
 };

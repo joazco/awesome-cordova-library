@@ -1,13 +1,25 @@
-# @awesome-cordova-library/localstorage
+---
+id: plugin-localstorage
+title: Localstorage
+tags:
+  - javascript
+  - typescript
+  - localstorage
+sidebar_position: 2
+---
+
+# Localstorage
 
 Library to use localstorage easily
+
+[Online documentation](https://awesomecordovalibrary.com)
 
 [Mozilla documentation](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage)
 
 ## Installation
 
 ```sh
-npm i @awesome-cordova-library/localstorage
+npm install @awesome-cordova-library/localstorage
 ```
 
 ## Vanilla
@@ -26,11 +38,11 @@ class LocalStorage {
 ### Usages
 
 ```typescript
-import LocalStorage from '@awesome-cordova-library/localstorage';
+import LocalStorage from "@awesome-cordova-library/localstorage";
 
-LocalStorage.setItem('item', value);
-LocalStorage.getItem('item');
-LocalStorage.removeItem('item');
+LocalStorage.setItem<string[]>("item", value);
+LocalStorage.getItem<string[]>("item");
+LocalStorage.removeItem("item");
 LocalStorage.clear();
 ```
 
@@ -50,16 +62,16 @@ const useLocalStorage: () => {
 ### Usages
 
 ```typescript
-import { useEffect } from 'react';
-import useLocalStorage from '@awesome-cordova-library/localstorage/lib/react';
+import { useEffect } from "react";
+import useLocalStorage from "@awesome-cordova-library/localstorage/lib/react";
 
 function App() {
   const { setItem, getItem, removeItem, clear } = useLocalStorage();
 
   useEffect(() => {
-    setItem('item', value);
-    getItem('item');
-    removeItem('item');
+    setItem<string[]>("item", value);
+    getItem<string[]>("item");
+    removeItem("item");
     clear();
   }, []);
 

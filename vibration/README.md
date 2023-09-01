@@ -1,14 +1,42 @@
-# @awesome-cordova-library/vibration
+---
+id: plugin-vibration
+title: Vibration
+tags:
+  - cordova
+  - capacitor
+  - ionic
+  - javascript
+  - typescript
+  - plugin
+  - mobile
+  - vibration
+---
 
-This plugin provides a way to vibrate the device. Its API aligns with the W3C vibration specification at http://www.w3.org/TR/vibration/
+# Vibration
+
+This plugin provides a way to vibrate the device. Its API aligns with the W3C vibration specification at
+
+[Online documentation](https://awesomecordovalibrary.com)
 
 [Cordova documentation](https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-vibration/index.html)
 
+[W3C documentation](http://www.w3.org/TR/vibration/)
+
 ## Installation
+
+### Cordova
 
 ```sh
 cordova plugin add cordova-plugin-vibration
-npm i @awesome-cordova-library/vibration
+npm install @awesome-cordova-library/vibration
+```
+
+### Capacitor / Ionic
+
+```bash
+npm install cordova-plugin-vibration
+npm install @awesome-cordova-library/vibration
+npx cap sync
 ```
 
 ## Vanilla
@@ -24,7 +52,7 @@ class Vibration {
 ### Usages
 
 ```typescript
-import Vibration from '@awesome-cordova-library/vibration';
+import Vibration from "@awesome-cordova-library/vibration";
 
 // Vibrate for 3 seconds
 Vibration.vibrate(3000);
@@ -44,8 +72,8 @@ const useVibration: () => (time: number | number[]) => void;
 ### Usages
 
 ```typescript
-import { useEffect } from 'react';
-import useVibration from '@awesome-cordova-library/vibration/lib/react';
+import { useEffect } from "react";
+import useVibration from "@awesome-cordova-library/vibration/lib/react";
 
 function App() {
   const vibrate = useVibration();

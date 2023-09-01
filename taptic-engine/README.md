@@ -1,16 +1,43 @@
-# @awesome-cordova-library/taptic-engine
+---
+id: plugin-taptic-engine
+title: Taptic Engine
+tags:
+  - cordova
+  - capacitor
+  - ionic
+  - javascript
+  - typescript
+  - plugin
+  - mobile
+  - taptic engine
+  - vibration
+---
+
+# Taptic Engine
 
 Apache Cordova / PhoneGap Plugin to enables adding contextual haptic feedback in response to specific user actions.
 
 **Only on iOS**
 
+[Online documentation](https://awesomecordovalibrary.com)
+
 [Github documentation](https://github.com/EddyVerbruggen/cordova-plugin-taptic-engine)
 
 ## Installation
 
+### Cordova
+
 ```sh
 cordova plugin add cordova-plugin-taptic-engine
-npm i @awesome-cordova-library/taptic-engine
+npm install @awesome-cordova-library/taptic-engine
+```
+
+### Capacitor / Ionic
+
+```bash
+npm install cordova-plugin-taptic-engine
+npm install @awesome-cordova-library/taptic-engine
+npx cap sync
 ```
 
 ## Vanilla
@@ -27,12 +54,12 @@ export default class TapicEngineIos {
    * Use notification feedback generators to indicate successes, failures, and warnings.
    * @param type {"success" | "warning" | "error"}
    */
-  static notification(type: 'success' | 'warning' | 'error'): void;
+  static notification(type: "success" | "warning" | "error"): void;
   /**
    * Use impact feedback generators to indicate that an impact has occurred. For example, you might trigger impact feedback when a user interface object collides with something or snaps into place.
    * @param style {"light" | "medium" | "heavy" | "rigid" | "soft"}
    */
-  static impact(style: 'light' | 'medium' | 'heavy' | 'rigid' | 'soft'): void;
+  static impact(style: "light" | "medium" | "heavy" | "rigid" | "soft"): void;
   /**
    * Tell the taptic engine that a gesture for a selection change is starting.
    */
@@ -80,8 +107,8 @@ TapicEngineIos.notification("error");
 ```typescript
 declare const useTapicEngineIos: () => {
   selection: () => void;
-  notification: (type: 'success' | 'warning' | 'error') => void;
-  impact: (style: 'light' | 'medium' | 'heavy' | 'rigid' | 'soft') => void;
+  notification: (type: "success" | "warning" | "error") => void;
+  impact: (style: "light" | "medium" | "heavy" | "rigid" | "soft") => void;
   gestureSelectionStart: () => void;
   gestureSelectionChanged: () => void;
   gestureSelectionEnd: () => void;
@@ -94,7 +121,7 @@ declare const useTapicEngineIos: () => {
 ### Usages
 
 ```typescript
-import useTapicEngineIos from '@awesome-cordova-library/taptic-engine/lib/react';
+import useTapicEngineIos from "@awesome-cordova-library/taptic-engine/lib/react";
 
 function App() {
   const { notification } = useTapicEngineIos();
@@ -102,7 +129,7 @@ function App() {
   return (
     <button
       onClick={() => {
-        notification('error');
+        notification("error");
       }}
     >
       Send error haptic

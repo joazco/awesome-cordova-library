@@ -1,15 +1,30 @@
-# Example of @awesome-cordova-library
+---
+id: plugin-example
+title: Example
+tags:
+  - cordova
+  - capacitor
+  - ionic
+  - javascript
+  - typescript
+  - plugin
+  - example
+sidebar_position: 1
+---
+
+# Example of Awesome Cordova Library from Joazco
 
 Project for test @awesome-cordova-library.
 
-This project is initialize from https://github.com/joazco/cordova-reactjs
+[Online documentation](https://awesomecordovalibrary.com)
+
+This project is initialize from [Cordova ReactJS project.](https://github.com/joazco/cordova-reactjs)
 
 ## Installation
 
 ```bash
-npm install -g cordova
-git clone git@github.com:poohia/react-cordova.git
-cd react-cordova
+git clone https://github.com/joazco/awesome-cordova-library.git
+cd example
 npm install
 npm start
 ```

@@ -1,14 +1,42 @@
-# @awesome-cordova-library/onesignal
+---
+id: plugin-onesignal
+title: Onesignal
+tags:
+  - cordova
+  - capacitor
+  - ionic
+  - javascript
+  - typescript
+  - plugin
+  - mobile
+  - onesignal
+  - notification
+  - notification push
+---
+
+# Onesignal
 
 OneSignal is a free email, sms, push notification, and in-app message service for mobile apps. This plugin makes it easy to integrate your Cordova based (e.g. Ionic, PhoneGap, and PhoneGap Build app with OneSignal.
+
+[Online documentation](https://awesomecordovalibrary.com)
 
 [Onesignal documentation](https://documentation.onesignal.com/docs/cordova-sdk-setup)
 
 ## Installation
 
+### Cordova
+
 ```sh
-npm i @awesome-cordova-library/onesignal
 cordova plugin add onesignal-cordova-plugin
+npm install @awesome-cordova-library/onesignal
+```
+
+### Capacitor / Ionic
+
+```bash
+npm install onesignal-cordova-plugin
+npm install @awesome-cordova-library/onesignal
+npx cap sync
 ```
 
 ## Vanilla
@@ -23,25 +51,33 @@ class Onesignal {
    * @param  {(event:NotificationReceivedEvent)=>void} handler
    * @returns void
    */
-  static setNotificationWillShowInForegroundHandler(handler: (event: NotificationReceivedEvent) => void): void;
+  static setNotificationWillShowInForegroundHandler(
+    handler: (event: NotificationReceivedEvent) => void
+  ): void;
   /**
    * Set the callback to run on notification open.
    * @param  {(openedEvent:OpenedEvent) => void} handler
    * @returns void
    */
-  static setNotificationOpenedHandler(handler: (openedEvent: OpenedEvent) => void): void;
+  static setNotificationOpenedHandler(
+    handler: (openedEvent: OpenedEvent) => void
+  ): void;
   /**
    * Sets an In-App Message click event handler.
    * @param  {(action:InAppMessageAction)=>void} handler
    * @returns void
    */
-  static setInAppMessageClickHandler(handler: (action: InAppMessageAction) => void): void;
+  static setInAppMessageClickHandler(
+    handler: (action: InAppMessageAction) => void
+  ): void;
   /**
    * Sets the In-App Message lifecycle handler object to run on displaying and/or dismissing an In-App Message.
    * @param  {InAppMessageLifecycleHandlerObject} handlerObject
    * @returns void
    */
-  static setInAppMessageLifecycleHandler(handlerObject: InAppMessageLifecycleHandlerObject): void;
+  static setInAppMessageLifecycleHandler(
+    handlerObject: InAppMessageLifecycleHandlerObject
+  ): void;
   /**
    * This method returns a "snapshot" of the device state for when it was called.
    * @param  {(response: DeviceState) => void} handler
@@ -58,32 +94,40 @@ class Onesignal {
   static setLanguage(
     language: string,
     onSuccess?: (success: object) => void,
-    onFailure?: (failure: object) => void,
+    onFailure?: (failure: object) => void
   ): void;
   /**
    * Add a callback that fires when the OneSignal subscription state changes.
    * @param  {(event:ChangeEvent<SubscriptionChange>)=>void} observer
    * @returns void
    */
-  static addSubscriptionObserver(observer: (event: ChangeEvent<SubscriptionChange>) => void): void;
+  static addSubscriptionObserver(
+    observer: (event: ChangeEvent<SubscriptionChange>) => void
+  ): void;
   /**
    * Add a callback that fires when the OneSignal email subscription changes.
    * @param  {(event:ChangeEvent<EmailSubscriptionChange>)=>void} observer
    * @returns void
    */
-  static addEmailSubscriptionObserver(observer: (event: ChangeEvent<EmailSubscriptionChange>) => void): void;
+  static addEmailSubscriptionObserver(
+    observer: (event: ChangeEvent<EmailSubscriptionChange>) => void
+  ): void;
   /**
    * Add a callback that fires when the OneSignal sms subscription changes.
    * @param  {(event:ChangeEvent<SMSSubscriptionChange>)=>void} observer
    * @returns void
    */
-  static addSMSSubscriptionObserver(observer: (event: ChangeEvent<SMSSubscriptionChange>) => void): void;
+  static addSMSSubscriptionObserver(
+    observer: (event: ChangeEvent<SMSSubscriptionChange>) => void
+  ): void;
   /**
    * Add a callback that fires when the native push permission changes.
    * @param  {(event:ChangeEvent<PermissionChange>)=>void} observer
    * @returns void
    */
-  static addPermissionObserver(observer: (event: ChangeEvent<PermissionChange>) => void): void;
+  static addPermissionObserver(
+    observer: (event: ChangeEvent<PermissionChange>) => void
+  ): void;
   /**
    * Retrieve a list of tags that have been set on the user from the OneSignal server.
    * @param  {(tags:object)=>void} handler
@@ -113,7 +157,9 @@ class Onesignal {
    * @param  {(response:{accepted:boolean})=>void} handler
    * @returns void
    */
-  static registerForProvisionalAuthorization(handler?: (response: { accepted: boolean }) => void): void;
+  static registerForProvisionalAuthorization(
+    handler?: (response: { accepted: boolean }) => void
+  ): void;
   /**
    * Prompts the user for push notifications permission in iOS and Android 13+.
    * Use the fallbackToSettings parameter to prompt to open the settings app if a user has already declined push permissions.
@@ -126,7 +172,7 @@ class Onesignal {
    */
   static promptForPushNotificationsWithUserResponse(
     fallbackToSettingsOrHandler?: boolean | ((response: boolean) => void),
-    handler?: (response: boolean) => void,
+    handler?: (response: boolean) => void
   ): void;
   /**
    * Android Only. iOS provides a standard way to clear notifications by clearing badge count.
@@ -167,7 +213,7 @@ class Onesignal {
   static postNotification(
     notificationObject: object,
     onSuccess?: (success: object) => void,
-    onFailure?: (failure: object) => void,
+    onFailure?: (failure: object) => void
   ): void;
   /**
    * iOS only.
@@ -202,8 +248,8 @@ class Onesignal {
         | boolean
         | {
             value: boolean;
-          },
-    ) => void,
+          }
+    ) => void
   ): void;
   /**
    * For GDPR users, your application should call this method before setting the App ID.
@@ -225,7 +271,12 @@ class Onesignal {
    * @param  {Function} onFailure
    * @returns void
    */
-  static setEmail(email: string, authCode?: string, onSuccess?: Function, onFailure?: Function): void;
+  static setEmail(
+    email: string,
+    authCode?: string,
+    onSuccess?: Function,
+    onFailure?: Function
+  ): void;
   /**
    * If your app implements logout functionality, you can call logoutEmail to dissociate the email from the device.
    * @param  {Function} onSuccess
@@ -241,7 +292,12 @@ class Onesignal {
    * @param  {Function} onFailure
    * @returns void
    */
-  static setSMSNumber(smsNumber: string, authCode?: string, onSuccess?: Function, onFailure?: Function): void;
+  static setSMSNumber(
+    smsNumber: string,
+    authCode?: string,
+    onSuccess?: Function,
+    onFailure?: Function
+  ): void;
   /**
    * If your app implements logout functionality, you can call logoutSMSNumber to dissociate the SMS number from the device.
    * @param  {Function} onSuccess
@@ -265,7 +321,7 @@ class Onesignal {
   static setExternalUserId(
     externalId: string | null,
     handlerOrAuth?: ((results: object) => void) | string,
-    handler?: (results: object) => void,
+    handler?: (results: object) => void
   ): void;
   /**
    * Removes whatever was set as the current user's external user ID.
@@ -278,7 +334,9 @@ class Onesignal {
    * @param  {[key: string]: string | number | boolean} triggers
    * @returns void
    */
-  static addTriggers(triggers: { [key: string]: string | number | boolean }): void;
+  static addTriggers(triggers: {
+    [key: string]: string | number | boolean;
+  }): void;
   /**
    * Add an In-App Message Trigger.
    * @param  {string} key
@@ -304,7 +362,10 @@ class Onesignal {
    * @param  {(value: string) => void} handler
    * @returns void
    */
-  static getTriggerValueForKey(key: string, handler: (value: string) => void): void;
+  static getTriggerValueForKey(
+    key: string,
+    handler: (value: string) => void
+  ): void;
   /**
    * Pause & unpause In-App Messages
    * @param  {boolean} pause
@@ -317,14 +378,20 @@ class Onesignal {
    * @param  {(event:OutcomeEvent)=>void} handler
    * @returns void
    */
-  static sendOutcome(name: string, handler?: (event: OutcomeEvent) => void): void;
+  static sendOutcome(
+    name: string,
+    handler?: (event: OutcomeEvent) => void
+  ): void;
   /**
    * Increases "Count" by 1 only once. This can only be attributed to a single notification.
    * @param  {string} name
    * @param  {(event:OutcomeEvent)=>void} handler
    * @returns void
    */
-  static sendUniqueOutcome(name: string, handler?: (event: OutcomeEvent) => void): void;
+  static sendUniqueOutcome(
+    name: string,
+    handler?: (event: OutcomeEvent) => void
+  ): void;
   /**
    * Increases the "Count" of this Outcome by 1 and the "Sum" by the value. Will be counted each time sent.
    * If the method is called outside of an attribution window, it will be unattributed until a new session occurs.
@@ -333,7 +400,11 @@ class Onesignal {
    * @param  {(event:OutcomeEvent)=>void} handler
    * @returns void
    */
-  static sendOutcomeWithValue(name: string, value: string | number, handler?: (event: OutcomeEvent) => void): void;
+  static sendOutcomeWithValue(
+    name: string,
+    value: string | number,
+    handler?: (event: OutcomeEvent) => void
+  ): void;
   /**
    * Prompts the user for location permissions to allow geotagging from the OneSignal dashboard.
    * @returns void
@@ -358,8 +429,8 @@ class Onesignal {
         | boolean
         | {
             value: boolean;
-          },
-    ) => void,
+          }
+    ) => void
   ): void;
 }
 export {
@@ -381,11 +452,11 @@ export {
 ### Usages
 
 ```typescript
-import Onesignal, { OpenedEvent } from '@awesome-cordova-library/onesignal';
+import Onesignal, { OpenedEvent } from "@awesome-cordova-library/onesignal";
 
-Onesignal.setAppId('YOUR_ONESIGNAL_APP_ID');
+Onesignal.setAppId("YOUR_ONESIGNAL_APP_ID");
 Onesignal.setNotificationOpenedHandler((jsonData: OpenedEvent) => {
-  console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+  console.log("notificationOpenedCallback: " + JSON.stringify(jsonData));
 });
 ```
 
@@ -396,23 +467,44 @@ Onesignal.setNotificationOpenedHandler((jsonData: OpenedEvent) => {
 ```typescript
 const useOnesignal: (appId: string) => {
   setAppId: (appId: string) => void;
-  setNotificationWillShowInForegroundHandler: (handler: (event: NotificationReceivedEvent) => void) => void;
-  setNotificationOpenedHandler: (handler: (openedEvent: OpenedEvent) => void) => void;
-  setInAppMessageClickHandler: (handler: (action: InAppMessageAction) => void) => void;
-  setInAppMessageLifecycleHandler: (handlerObject: InAppMessageLifecycleHandlerObject) => void;
+  setNotificationWillShowInForegroundHandler: (
+    handler: (event: NotificationReceivedEvent) => void
+  ) => void;
+  setNotificationOpenedHandler: (
+    handler: (openedEvent: OpenedEvent) => void
+  ) => void;
+  setInAppMessageClickHandler: (
+    handler: (action: InAppMessageAction) => void
+  ) => void;
+  setInAppMessageLifecycleHandler: (
+    handlerObject: InAppMessageLifecycleHandlerObject
+  ) => void;
   getDeviceState: (handler: (response: DeviceState) => void) => void;
   setLanguage: (language: string) => Promise<unknown>;
-  addSubscriptionObserver: (observer: (event: ChangeEvent<SubscriptionChange>) => void) => void;
-  addEmailSubscriptionObserver: (observer: (event: ChangeEvent<EmailSubscriptionChange>) => void) => void;
-  addSMSSubscriptionObserver: (observer: (event: ChangeEvent<SMSSubscriptionChange>) => void) => void;
-  addPermissionObserver: (observer: (event: ChangeEvent<PermissionChange>) => void) => void;
+  addSubscriptionObserver: (
+    observer: (event: ChangeEvent<SubscriptionChange>) => void
+  ) => void;
+  addEmailSubscriptionObserver: (
+    observer: (event: ChangeEvent<EmailSubscriptionChange>) => void
+  ) => void;
+  addSMSSubscriptionObserver: (
+    observer: (event: ChangeEvent<SMSSubscriptionChange>) => void
+  ) => void;
+  addPermissionObserver: (
+    observer: (event: ChangeEvent<PermissionChange>) => void
+  ) => void;
   getTags: (handler: (tags: object) => void) => void;
   sendTag: (key: string, value: string) => void;
   deleteTags: (keys: string[]) => void;
-  registerForProvisionalAuthorization: (handler?: ((response: { accepted: boolean }) => void) | undefined) => void;
+  registerForProvisionalAuthorization: (
+    handler?: ((response: { accepted: boolean }) => void) | undefined
+  ) => void;
   promptForPushNotificationsWithUserResponse: (
-    fallbackToSettingsOrHandler?: boolean | ((response: boolean) => void) | undefined,
-    handler?: ((response: boolean) => void) | undefined,
+    fallbackToSettingsOrHandler?:
+      | boolean
+      | ((response: boolean) => void)
+      | undefined,
+    handler?: ((response: boolean) => void) | undefined
   ) => void;
   clearOneSignalNotifications: () => void;
   unsubscribeWhenNotificationsAreDisabled: (unsubscribe: boolean) => void;
@@ -429,8 +521,8 @@ const useOnesignal: (appId: string) => {
         | boolean
         | {
             value: boolean;
-          },
-    ) => void,
+          }
+    ) => void
   ) => void;
   setRequiresUserPrivacyConsent: (required: boolean) => void;
   provideUserConsent: (granted: boolean) => void;
@@ -441,21 +533,30 @@ const useOnesignal: (appId: string) => {
   setExternalUserId: (
     externalId: string | null,
     handlerOrAuth?: string | ((results: object) => void) | undefined,
-    handler?: ((results: object) => void) | undefined,
+    handler?: ((results: object) => void) | undefined
   ) => void;
   removeExternalUserId: (handler: (results: object) => void) => void;
   addTriggers: (triggers: { [key: string]: string | number | boolean }) => void;
   addTrigger: (key: string, value: string | number | boolean) => void;
   removeTriggerForKey: (key: string) => void;
   removeTriggersForKeys: (keys: string[]) => void;
-  getTriggerValueForKey: (key: string, handler: (value: string) => void) => void;
+  getTriggerValueForKey: (
+    key: string,
+    handler: (value: string) => void
+  ) => void;
   pauseInAppMessages: (pause: boolean) => void;
-  sendOutcome: (name: string, handler?: ((event: OutcomeEvent) => void) | undefined) => void;
-  sendUniqueOutcome: (name: string, handler?: ((event: OutcomeEvent) => void) | undefined) => void;
+  sendOutcome: (
+    name: string,
+    handler?: ((event: OutcomeEvent) => void) | undefined
+  ) => void;
+  sendUniqueOutcome: (
+    name: string,
+    handler?: ((event: OutcomeEvent) => void) | undefined
+  ) => void;
   sendOutcomeWithValue: (
     name: string,
     value: string | number,
-    handler?: ((event: OutcomeEvent) => void) | undefined,
+    handler?: ((event: OutcomeEvent) => void) | undefined
   ) => void;
   promptLocation: () => void;
   setLocationShared: (shared: boolean) => void;
@@ -465,8 +566,8 @@ const useOnesignal: (appId: string) => {
         | boolean
         | {
             value: boolean;
-          },
-    ) => void,
+          }
+    ) => void
   ) => void;
 };
 ```
@@ -474,13 +575,17 @@ const useOnesignal: (appId: string) => {
 ### Usages
 
 ```typescript
-import { useState, useEffect } from 'react';
-import useOnesignal from '@awesome-cordova-library/onesignal/lib/react';
-import { OpenedEvent } from '@awesome-cordova-library/onesignal';
+import { useState, useEffect } from "react";
+import useOnesignal from "@awesome-cordova-library/onesignal/lib/react";
+import { OpenedEvent } from "@awesome-cordova-library/onesignal";
 
 function App() {
-  const [notificationData, setNotificationData] = useState<OpenedEvent | undefined>();
-  const { setNotificationOpenedHandler } = useOnesignal('YOUR_ONESIGNAL_APP_ID');
+  const [notificationData, setNotificationData] = useState<
+    OpenedEvent | undefined
+  >();
+  const { setNotificationOpenedHandler } = useOnesignal(
+    "YOUR_ONESIGNAL_APP_ID"
+  );
   useEffect(() => {
     setNotificationOpenedHandler((jsonData) => {
       setNotificationData(jsonData);

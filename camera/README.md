@@ -1,14 +1,40 @@
-# @awesome-cordova-library/camera
+---
+id: plugin-camera
+title: Camera
+tags:
+  - cordova
+  - capacitor
+  - ionic
+  - javascript
+  - typescript
+  - plugin
+  - mobile
+  - camera
+---
+
+# Camera
 
 This plugin defines a global navigator.camera object, which provides an API for taking pictures and for choosing images from the system's image library.
+
+[Online documentation](https://awesomecordovalibrary.com)
 
 [Cordova documentation](https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-camera/index.html#module_CameraPopoverHandle)
 
 ## Installation
 
+### Cordova
+
 ```sh
 cordova plugin add cordova-plugin-camera
-npm i @awesome-cordova-library/camera
+npm install @awesome-cordova-library/camera
+```
+
+### Capacitor / Ionic
+
+```bash
+npm install cordova-plugin-camera
+npm install @awesome-cordova-library/camera
+npx cap sync
 ```
 
 ## Vanilla
@@ -26,7 +52,7 @@ class Camera {
   static getPicture(
     cameraSuccess: (imageData: string) => void,
     cameraError: (message: string) => void,
-    cameraOptions?: Partial<CameraOptions>,
+    cameraOptions?: Partial<CameraOptions>
   ): void;
   /**
    * Removes intermediate image files that are kept in temporary storage after calling camera.getPicture. Applies only when the value of Camera.sourceType equals Camera.PictureSourceType.CAMERA and the Camera.destinationType equals Camera.DestinationType.FILE_URI.
@@ -40,12 +66,12 @@ class Camera {
 ### Usages
 
 ```typescript
-import Camera, { DestinationType } from '@awesome-cordova-library/camera';
+import Camera, { DestinationType } from "@awesome-cordova-library/camera";
 
 Camera.getPicture(
   (imageData) => console.log(imageData),
   (messageError) => console.log(messageError),
-  { destinationType: DestinationType.DATA_URL },
+  { destinationType: DestinationType.DATA_URL }
 );
 ```
 
@@ -58,7 +84,7 @@ const useCamera: () => {
   getPicture: (
     cameraSuccess: (imageData: string) => void,
     cameraError: (message: string) => void,
-    cameraOptions?: Partial<CameraOptions>,
+    cameraOptions?: Partial<CameraOptions>
   ) => void;
   cleanup: (onSuccess: () => void, onFail: () => void) => void;
 };
@@ -67,9 +93,9 @@ const useCamera: () => {
 ### Usages
 
 ```typescript
-import { useEffect, useState, useCallback } from 'react';
-import useCamera from '@awesome-cordova-library/camera/lib/react';
-import { DestinationType } from '@awesome-cordova-library/camera';
+import { useEffect, useState, useCallback } from "react";
+import useCamera from "@awesome-cordova-library/camera/lib/react";
+import { DestinationType } from "@awesome-cordova-library/camera";
 
 function App() {
   const [srcImage, setSrcImage] = useState<string | undefined>();
@@ -79,11 +105,11 @@ function App() {
     getPicture(
       (imageData) => setSrcImage(imageData),
       () => {
-        alert('Error to take picture');
+        alert("Error to take picture");
       },
       {
         destinationType: DestinationType.DATA_URL,
-      },
+      }
     );
   }, [getPicture]);
 

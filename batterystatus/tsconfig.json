@@ -6,8 +6,9 @@
     "outDir": "./lib",
     "strict": true,
     "lib": ["dom", "es2018"],
-    "removeComments": false
+    "removeComments": false,
+    "typeRoots": ["./nodes_modules/@types"]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "include": ["./src"],
+  "exclude": ["./node_modules/", "**/__tests__/*"]
 }

@@ -1,4 +1,18 @@
-# @awesome-cordova-library/cordova-plugin-shake
+---
+id: plugin-shake
+title: Shake
+tags:
+  - cordova
+  - capacitor
+  - ionic
+  - javascript
+  - typescript
+  - plugin
+  - mobile
+  - shake
+---
+
+# Shake
 
 Apache Cordova / PhoneGap Plugin to detect when a physical device performs a shake gesture.
 
@@ -9,9 +23,19 @@ Fo all other platforms, it is based on a standalone JavaScript implementation.
 
 ## Installation
 
+### Cordova
+
 ```sh
 cordova plugin add cordova-plugin-shake
-npm i @awesome-cordova-library/shake
+npm install @awesome-cordova-library/shake
+```
+
+### Capacitor / Ionic
+
+```bash
+npm install cordova-plugin-shake
+npm install @awesome-cordova-library/shake
+npx cap sync
 ```
 
 ## Vanilla
@@ -20,7 +44,11 @@ npm i @awesome-cordova-library/shake
 
 ```typescript
 export default class Shake {
-  static startWatch(onShake: () => void, sensitivity?: number, onError?: () => void): void;
+  static startWatch(
+    onShake: () => void,
+    sensitivity?: number,
+    onError?: () => void
+  ): void;
   static stopWatch(): void;
   static warnPluginIsUnInstallOrIncompatible(): void;
 }
@@ -44,7 +72,11 @@ setTimeout(() => {
 
 ```typescript
 declare const useShake: () => {
-  startWatch: (onShake: () => void, sensitivity?: number, onError?: () => void) => void;
+  startWatch: (
+    onShake: () => void,
+    sensitivity?: number,
+    onError?: () => void
+  ) => void;
   stopWatch: () => void;
 };
 ```

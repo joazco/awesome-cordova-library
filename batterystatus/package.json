@@ -45,7 +45,7 @@
     "build": "rm -rf lib/ && tsc",
     "build-yalc": "npm run build; yalc publish --push --private",
     "test": "jest --config jestconfig.json",
-    "format": "prettier --write \"src/**/*.ts\"",
+    "format": "prettier --write \"./src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepublish": "npm run format; npm run lint; npm test; npm run build"
   },

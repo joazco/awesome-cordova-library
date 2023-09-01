@@ -80,6 +80,7 @@
     "cordova-plugin-geolocation": "^4.1.0",
     "cordova-plugin-globalization": "^1.11.0",
     "cordova-plugin-inappbrowser": "^5.0.0",
+    "cordova-plugin-media": "^6.1.0",
     "cordova-plugin-nativeaudio": "^3.0.9",
     "cordova-plugin-network-information": "^3.0.0",
     "cordova-plugin-screen-orientation": "^3.0.2",
@@ -114,7 +115,8 @@
         "GPS_REQUIRED": "true"
       },
       "cordova-plugin-shake": {},
-      "cordova-plugin-taptic-engine": {}
+      "cordova-plugin-taptic-engine": {},
+      "cordova-plugin-media": {}
     },
     "platforms": [
       "ios"

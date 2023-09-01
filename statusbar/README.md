@@ -1,14 +1,40 @@
-# @awesome-cordova-library/statubar
+---
+id: plugin-statusbar
+title: Statusbar
+tags:
+  - cordova
+  - capacitor
+  - ionic
+  - javascript
+  - typescript
+  - plugin
+  - mobile
+  - statusbar
+---
+
+# Statusbar
 
 The StatusBar object provides some functions to customize the iOS and Android StatusBar.
+
+[Online documentation](https://awesomecordovalibrary.com)
 
 [Cordova documentation](https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-statusbar/index.html)
 
 ## Installation
 
+### Cordova
+
 ```sh
 cordova plugin add cordova-plugin-statusbar
-npm i @awesome-cordova-library/statusbar
+npm install @awesome-cordova-library/statusbar
+```
+
+### Capacitor / Ionic
+
+```bash
+npm install cordova-plugin-statusbar
+npm install @awesome-cordova-library/statusbar
+npx cap sync
 ```
 
 ## Vanilla
@@ -116,8 +142,8 @@ const useStatusbar: () => {
 ### Usages
 
 ```typescript
-import { useEffect } from 'react';
-import useStatusbar from '@awesome-cordova-library/statusbar/lib/react';
+import { useEffect } from "react";
+import useStatusbar from "@awesome-cordova-library/statusbar/lib/react";
 
 function App() {
   const {
@@ -136,7 +162,7 @@ function App() {
   useEffect(() => {
     styleDefault();
     overlaysWebView(false);
-    backgroundColorByHexString('#FFA500');
+    backgroundColorByHexString("#FFA500");
   }, []);
 
   return <div />;
