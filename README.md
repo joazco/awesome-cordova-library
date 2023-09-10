@@ -2,21 +2,23 @@
 id: plugins
 title: Plugins
 tags:
-  - Démo
-  - Pour commencer
+  - plugins
+  - packages
 ---
 
 # @awesome-cordova-library
 
 [![Tests](https://github.com/joazco/awesome-cordova-library/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/joazco/awesome-cordova-library/actions/workflows/tests.yml)
 
+[Online documentation](https://awesomecordovalibrary.com)
+
 ## Packages
 
 | Project                 | Package                                                                                                                      | Version                                                                                                                                                                        | Downloads                                                                                                                                                                                                                 |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **LocalStorage**        | [`@awesome-cordova-library/localstorage`](https://www.npmjs.com/package/@awesome-cordova-library/localstorage)               | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/localstorage/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/localstorage)               | <a href="https://www.npmjs.com/package/@awesome-cordova-library/localstorage" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/localstorage.svg" alt="NPM Downloads" /></a>               |
 | **App version**         | [`@awesome-cordova-library/appversion`](https://www.npmjs.com/package/@awesome-cordova-library/appversion)                   | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/appversion/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/appversion)                   | <a href="https://www.npmjs.com/package/@awesome-cordova-library/appversion" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/appversion.svg" alt="NPM Downloads" /></a>                   |
 | **Device**              | [`@awesome-cordova-library/device`](https://www.npmjs.com/package/@awesome-cordova-library/device)                           | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/device/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/device)                           | <a href="https://www.npmjs.com/package/@awesome-cordova-library/device" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/device.svg" alt="NPM Downloads" /></a>                           |
-| **LocalStorage**        | [`@awesome-cordova-library/localstorage`](https://www.npmjs.com/package/@awesome-cordova-library/localstorage)               | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/localstorage/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/localstorage)               | <a href="https://www.npmjs.com/package/@awesome-cordova-library/localstorage" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/localstorage.svg" alt="NPM Downloads" /></a>               |
 | **NativeAudio**         | [`@awesome-cordova-library/nativeaudio`](https://www.npmjs.com/package/@awesome-cordova-library/nativeaudio)                 | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/nativeaudio/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/nativeaudio)                 | <a href="https://www.npmjs.com/package/@awesome-cordova-library/nativeaudio" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/nativeaudio.svg" alt="NPM Downloads" /></a>                 |
 | **ScreenOrientation**   | [`@awesome-cordova-library/screen-orientation`](https://www.npmjs.com/package/@awesome-cordova-library/screen-orientation)   | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/screen-orientation/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/screen-orientation)   | <a href="https://www.npmjs.com/package/@awesome-cordova-library/screen-orientation" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/screen-orientation.svg" alt="NPM Downloads" /></a>   |
 | **SocialSharing**       | [`@awesome-cordova-library/social-sharing`](https://www.npmjs.com/package/@awesome-cordova-library/social-sharing)           | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/social-sharing/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/social-sharing)           | <a href="https://www.npmjs.com/package/@awesome-cordova-library/social-sharing" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/social-sharing.svg" alt="NPM Downloads" /></a>           |
@@ -34,6 +36,15 @@ tags:
 | **Onesignal**           | [`@awesome-cordova-library/onesignal`](https://www.npmjs.com/package/@awesome-cordova-library/onesignal)                     | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/onesignal/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/onesignal)                     | <a href="https://www.npmjs.com/package/@awesome-cordova-library/onesignal" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/onesignal.svg" alt="NPM Downloads" /></a>                     |
 | **Shake**               | [`@awesome-cordova-library/shake`](https://www.npmjs.com/package/@awesome-cordova-library/shake)                             | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/shake/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/shake)                             | <a href="https://www.npmjs.com/package/@awesome-cordova-library/shake" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/shake.svg" alt="NPM Downloads" /></a>                             |
 | **Taptic Engine**       | [`@awesome-cordova-library/taptic-engine`](https://www.npmjs.com/package/@awesome-cordova-library/taptic-engine)             | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/taptic-engine/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/taptic-engine)             | <a href="https://www.npmjs.com/package/@awesome-cordova-library/taptic-engine" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/taptic-engine.svg" alt="NPM Downloads" /></a>             |
+| **Compressor Image**    | [`@awesome-cordova-library/compressor-image`](https://www.npmjs.com/package/@awesome-cordova-library/compressor-image)       | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/compressor-image/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/compressor-image)       | <a href="https://www.npmjs.com/package/@awesome-cordova-library/compressor-image" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/compressor-image.svg" alt="NPM Downloads" /></a>       |
+
+## Example
+
+[See doc](./example/README.md)
+
+## LocalStorage
+
+[See doc](./localStorage/README.md)
 
 ## App version
 
@@ -42,10 +53,6 @@ tags:
 ## Device
 
 [See doc](./device/README.md)
-
-## LocalStorage
-
-[See doc](./localStorage/README.md)
 
 ## Media
 
@@ -119,6 +126,6 @@ tags:
 
 [See doc](./taptic-engine/README.md)
 
-## Example
+## Compressor Image
 
-[See doc](./example/README.md)
+[See doc](./compressor-image/README.md)

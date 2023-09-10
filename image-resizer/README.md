@@ -22,6 +22,10 @@ Cordova Plugin For Image Resize.
 
 [Github documentation](https://github.com/JoschkaSchulz/cordova-plugin-image-resizer)
 
+## Warning
+
+**This plugin appears to be depreciated, please use [Compressor Image](../compressor-image/README.md) .**
+
 ## Installation
 
 ### Cordova
