@@ -140,20 +140,20 @@ export default class CompressorImage {
       outputFormat,
     });
 
-    const base64From = CompressorImage.sizeBase64ToMo(compressReturn.base64);
+    const base64FromLength = CompressorImage.sizeBase64ToMo(compressReturn.base64);
+
     let finalBase64 = compressReturn;
-    let base64SizeTo = base64From;
+    let base64SizeToLength = base64FromLength;
     let quality = 1;
 
-    while (base64SizeTo > targetLength) {
-      const tmpBase64 = await CompressorImage.compress({ src, quality, outputFormat });
-      base64SizeTo = CompressorImage.sizeBase64ToMo(tmpBase64.base64);
-      if (base64SizeTo < targetLength || quality < minQuality) {
-        finalBase64 = tmpBase64;
-      }
-      if (quality < minQuality) {
-        break;
-      }
+    while (base64SizeToLength > targetLength && quality >= minQuality) {
+      finalBase64 = await CompressorImage.compress({
+        src: compressReturn.base64,
+        quality,
+        outputFormat: compressReturn.outputFormat,
+      });
+      base64SizeToLength = CompressorImage.sizeBase64ToMo(finalBase64.base64);
+
       quality = parseFloat((quality - 0.1).toFixed(2));
     }
 

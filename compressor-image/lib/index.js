@@ -141,7 +141,7 @@ var CompressorImage = /** @class */ (function () {
      */
     CompressorImage.compressTargetLength = function (options) {
         return __awaiter(this, void 0, void 0, function () {
-            var src, _a, minQuality, targetLength, maxWidth, maxHeight, outputFormat, compressReturn, base64From, finalBase64, base64SizeTo, quality, tmpBase64;
+            var src, _a, minQuality, targetLength, maxWidth, maxHeight, outputFormat, compressReturn, base64FromLength, finalBase64, base64SizeToLength, quality;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -155,23 +155,21 @@ var CompressorImage = /** @class */ (function () {
                             })];
                     case 1:
                         compressReturn = _b.sent();
-                        base64From = CompressorImage.sizeBase64ToMo(compressReturn.base64);
+                        base64FromLength = CompressorImage.sizeBase64ToMo(compressReturn.base64);
                         finalBase64 = compressReturn;
-                        base64SizeTo = base64From;
+                        base64SizeToLength = base64FromLength;
                         quality = 1;
                         _b.label = 2;
                     case 2:
-                        if (!(base64SizeTo > targetLength)) return [3 /*break*/, 4];
-                        return [4 /*yield*/, CompressorImage.compress({ src: src, quality: quality, outputFormat: outputFormat })];
+                        if (!(base64SizeToLength > targetLength && quality >= minQuality)) return [3 /*break*/, 4];
+                        return [4 /*yield*/, CompressorImage.compress({
+                                src: compressReturn.base64,
+                                quality: quality,
+                                outputFormat: compressReturn.outputFormat,
+                            })];
                     case 3:
-                        tmpBase64 = _b.sent();
-                        base64SizeTo = CompressorImage.sizeBase64ToMo(tmpBase64.base64);
-                        if (base64SizeTo < targetLength || quality < minQuality) {
-                            finalBase64 = tmpBase64;
-                        }
-                        if (quality < minQuality) {
-                            return [3 /*break*/, 4];
-                        }
+                        finalBase64 = _b.sent();
+                        base64SizeToLength = CompressorImage.sizeBase64ToMo(finalBase64.base64);
                         quality = parseFloat((quality - 0.1).toFixed(2));
                         return [3 /*break*/, 2];
                     case 4: return [2 /*return*/, finalBase64];
