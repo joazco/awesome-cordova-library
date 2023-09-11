@@ -121,7 +121,8 @@ var CompressorImage = /** @class */ (function () {
                 var webPDataUrl = canvas.toDataURL(finalOuputFormat, quality);
                 var base64 = webPDataUrl.split(',')[1];
                 resolve({
-                    base64: "data:".concat(finalOuputFormat || '', ";base64,").concat(base64),
+                    base64: base64,
+                    base64Formatted: webPDataUrl,
                     quality: quality,
                     outputFormat: finalOuputFormat,
                     width: width,
@@ -141,7 +142,7 @@ var CompressorImage = /** @class */ (function () {
      */
     CompressorImage.compressTargetLength = function (options) {
         return __awaiter(this, void 0, void 0, function () {
-            var src, _a, minQuality, targetLength, maxWidth, maxHeight, outputFormat, compressReturn, base64FromLength, finalBase64, base64SizeToLength, quality;
+            var src, _a, minQuality, targetLength, maxWidth, maxHeight, outputFormat, compressReturn, finalBase64, base64SizeToLength, quality;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -155,17 +156,18 @@ var CompressorImage = /** @class */ (function () {
                             })];
                     case 1:
                         compressReturn = _b.sent();
-                        base64FromLength = CompressorImage.sizeBase64ToMo(compressReturn.base64);
                         finalBase64 = compressReturn;
-                        base64SizeToLength = base64FromLength;
-                        quality = 1;
+                        base64SizeToLength = CompressorImage.sizeBase64ToMo(compressReturn.base64);
+                        quality = 0.9;
                         _b.label = 2;
                     case 2:
                         if (!(base64SizeToLength > targetLength && quality >= minQuality)) return [3 /*break*/, 4];
                         return [4 /*yield*/, CompressorImage.compress({
-                                src: compressReturn.base64,
+                                src: src,
                                 quality: quality,
-                                outputFormat: compressReturn.outputFormat,
+                                outputFormat: outputFormat,
+                                maxWidth: maxWidth,
+                                maxHeight: maxHeight,
                             })];
                     case 3:
                         finalBase64 = _b.sent();

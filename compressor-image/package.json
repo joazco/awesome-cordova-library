@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/compressor-image",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "An efficient JavaScript library that utilizes canvas to compress images by adjusting their quality or size. Ideal for optimizing images for better performance and faster loading times.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

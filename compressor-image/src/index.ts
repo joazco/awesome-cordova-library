@@ -11,6 +11,7 @@ export type CompressOptions = {
 };
 export type CompressorImageReturn = {
   base64: string;
+  base64Formatted: string;
   outputFormat?: OutputFormat;
   width: number;
   height: number;
@@ -105,8 +106,10 @@ export default class CompressorImage {
         }
         const webPDataUrl = canvas.toDataURL(finalOuputFormat, quality);
         const base64 = webPDataUrl.split(',')[1];
+
         resolve({
-          base64: `data:${finalOuputFormat || ''};base64,${base64}`,
+          base64,
+          base64Formatted: webPDataUrl,
           quality,
           outputFormat: finalOuputFormat,
           width,
@@ -140,20 +143,19 @@ export default class CompressorImage {
       outputFormat,
     });
 
-    const base64FromLength = CompressorImage.sizeBase64ToMo(compressReturn.base64);
-
     let finalBase64 = compressReturn;
-    let base64SizeToLength = base64FromLength;
-    let quality = 1;
+    let base64SizeToLength = CompressorImage.sizeBase64ToMo(compressReturn.base64);
+    let quality = 0.9;
 
     while (base64SizeToLength > targetLength && quality >= minQuality) {
       finalBase64 = await CompressorImage.compress({
-        src: compressReturn.base64,
+        src,
         quality,
-        outputFormat: compressReturn.outputFormat,
+        outputFormat,
+        maxWidth,
+        maxHeight,
       });
       base64SizeToLength = CompressorImage.sizeBase64ToMo(finalBase64.base64);
-
       quality = parseFloat((quality - 0.1).toFixed(2));
     }
 

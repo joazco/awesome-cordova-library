@@ -11,6 +11,7 @@ export declare type CompressOptions = {
 };
 export declare type CompressorImageReturn = {
     base64: string;
+    base64Formatted: string;
     outputFormat?: OutputFormat;
     width: number;
     height: number;
