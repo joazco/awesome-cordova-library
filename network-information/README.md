@@ -25,15 +25,15 @@ This plugin provides an implementation of an old version of the Network Informat
 ### Cordova
 
 ```sh
-cordova plugin add cordova-plugin-screen-orientation
-npm install @awesome-cordova-library/screen-orientation
+cordova plugin add cordova-plugin-network-information
+npm install @awesome-cordova-library/network-information
 ```
 
 ### Capacitor / Ionic
 
 ```bash
-npm install cordova-plugin-screen-orientation
-npm install @awesome-cordova-library/screen-orientation
+cordova plugin add cordova-plugin-network-information
+npm install @awesome-cordova-library/network-information
 npx cap sync
 ```
 
@@ -42,24 +42,16 @@ npx cap sync
 ### Declaration
 
 ```typescript
-export declare type ConnectionType =
-  | "unknown"
-  | "ethernet"
-  | "wifi"
-  | "2g"
-  | "3g"
-  | "4g"
-  | "cellular"
-  | "none";
+export declare type ConnectionType = 'unknown' | 'ethernet' | 'wifi' | '2g' | '3g' | '4g' | 'cellular' | 'none';
 export declare enum Connection {
-  UNKNOWN = "unknown",
-  ETHERNET = "ethernet",
-  WIFI = "wifi",
-  CELL_2G = "2g",
-  CELL_3G = "3g",
-  CELL_4G = "4g",
-  CELL = "cellular",
-  NONE = "none",
+  UNKNOWN = 'unknown',
+  ETHERNET = 'ethernet',
+  WIFI = 'wifi',
+  CELL_2G = '2g',
+  CELL_3G = '3g',
+  CELL_4G = '4g',
+  CELL = 'cellular',
+  NONE = 'none',
 }
 
 class NetworkInformation {
@@ -84,7 +76,7 @@ class NetworkInformation {
 ### Usages
 
 ```typescript
-import NetworkInformation from "@awesome-cordova-library/network-information";
+import NetworkInformation from '@awesome-cordova-library/network-information';
 
 const type = NetworkInformation.getNetworkType();
 NetworkInformation.onOffline(() => {});
@@ -106,20 +98,19 @@ const useNetworkInformation: () => {
 ### Usages
 
 ```typescript
-import { useEffect, useState } from "react";
-import { ConnectionType } from "@awesome-cordova-library/network-information/";
-import useNetworkInformation from "@awesome-cordova-library/network-information/lib/react";
+import { useEffect, useState } from 'react';
+import { ConnectionType } from '@awesome-cordova-library/network-information/';
+import useNetworkInformation from '@awesome-cordova-library/network-information/lib/react';
 
 function App() {
-  const [connectionType, setConnectionType] =
-    useState<ConnectionType>("unknown");
+  const [connectionType, setConnectionType] = useState<ConnectionType>('unknown');
   const [isOnline, setIsOnline] = useState<boolean>(true);
   const { getNetworkType, onOffline, onOnline } = useNetworkInformation();
 
   useEffect(() => {
     const networkType = getNetworkType();
     setConnectionType(networkType);
-    setIsOnline(networkType !== "unknown" && networkType !== "none");
+    setIsOnline(networkType !== 'unknown' && networkType !== 'none');
     setInterval(() => {
       setConnectionType(getNetworkType());
     }, 1000);
