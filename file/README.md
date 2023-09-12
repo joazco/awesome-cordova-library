@@ -54,4 +54,18 @@ function onDeviceReady() {
   console.log(cordova.file);
   console.log(cordova.file.dataDirectory);
 }
+
+var folderName = "myFolder";
+// create directory myFolder
+window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function (dirEntry) {
+    const directory = dirEntry as globalThis.DirectoryEntry;
+    directory.getDirectory(folderName, { create: true, exclusive: false }, function (folderEntry) {
+        console.log("Directory created: " + folderEntry.toURL());
+    }, onError);
+}, onError);
+
+function onError(error) {
+    console.error("Error : " + JSON.stringify(error));
+}
+
 ```
