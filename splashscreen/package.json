@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/splashscreen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin displays and hides a splash screen while your web application is launching. Using its methods you can also show and hide the splash screen manually.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

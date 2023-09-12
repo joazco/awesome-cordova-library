@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/localstorage",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Library to use localstorage easily",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

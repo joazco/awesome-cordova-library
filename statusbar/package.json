@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/statusbar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The StatusBar object provides some functions to customize the iOS and Android StatusBar.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

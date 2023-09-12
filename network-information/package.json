@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/network-information",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin provides an implementation of an old version of the Network Information API. It provides information about the device's cellular and wifi connection, and whether the device has an internet connection.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

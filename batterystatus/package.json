@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/batterystatus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin provides an implementation of an old version of the Battery Status Events API.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

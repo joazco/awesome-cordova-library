@@ -29,6 +29,8 @@ cordova plugin add cordova-plugin-inappbrowser
 npm i @awesome-cordova-library/ratedialog
 ```
 
+### Capacitor / Ionic
+
 ```bash
 npm install cordova-plugin-dialogs
 npm install cordova-plugin-device
@@ -94,15 +96,15 @@ class RateDialog {
 ### Usages
 
 ```typescript
-import RateDialog from "@awesome-cordova-library/ratedialog";
+import RateDialog from '@awesome-cordova-library/ratedialog';
 
 RateDialog.setPreference({
-  appName: "Cordova Awesome Library",
-  locale: "en",
+  appName: 'Cordova Awesome Library',
+  locale: 'en',
   usesUntilPrompt: 3,
   storeAppURL: {
-    ios: "1234567",
-    android: "com.joazco.cordovaawesomelibrary",
+    ios: '1234567',
+    android: 'com.joazco.cordovaawesomelibrary',
   },
 });
 RateDialog.promptForRating();
@@ -126,17 +128,17 @@ const useRateDialog: (initOptions: DialogRateOption) => {
 ### Usages
 
 ```typescript
-import { useEffect } from "react";
-import useRateDialog from "@awesome-cordova-library/ratedialog/lib/react";
+import { useEffect } from 'react';
+import useRateDialog from '@awesome-cordova-library/ratedialog/lib/react';
 
 function App() {
   const { promptForRating } = useRateDialog({
-    appName: "Cordova Awesome Library",
-    locale: "en",
+    appName: 'Cordova Awesome Library',
+    locale: 'en',
     usesUntilPrompt: 3,
     storeAppURL: {
-      ios: "1234567",
-      android: "com.joazco.cordovaawesomelibrary",
+      ios: '1234567',
+      android: 'com.joazco.cordovaawesomelibrary',
     },
   });
 

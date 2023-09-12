@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/ratedialog",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A plugin to provide rate this app functionality into your cordova application.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

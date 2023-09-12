@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/screen-orientation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cordova plugin to set/lock the screen orientation in a common way for iOS, Android, and windows-uwp",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

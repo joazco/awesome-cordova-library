@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/camera",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This plugin defines a global navigator.camera object, which provides an API for taking pictures and for choosing images from the system's image library.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

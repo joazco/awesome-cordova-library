@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/dialogs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin provides access to some native dialog UI elements via a global navigator.notification object.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/social-sharing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin allows you to use the native sharing window of your mobile device.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

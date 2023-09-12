@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-library/inappbrowser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This plugin provides a web browser view that displays when calling",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
