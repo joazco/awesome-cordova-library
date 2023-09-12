@@ -134,3 +134,11 @@ tags:
 ## OIDC
 
 [See doc](./oidc/README.md)
+
+## Camera Preview
+
+[See doc](./camera-preview/README.md)
+
+## File
+
+[See doc](./file/README.md)
