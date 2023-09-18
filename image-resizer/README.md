@@ -24,7 +24,7 @@ Cordova Plugin For Image Resize.
 
 ## Warning
 
-**This plugin appears to be depreciated, please use [Compressor Image](../compressor-image/README.md) .**
+**This plugin appears to be depreciated, please use [Compressor Image](https://awesome-cordova-library.vercel.app/docs/plugins/canvas-compressor-image/) .**
 
 ## Installation
 

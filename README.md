@@ -36,7 +36,6 @@ tags:
 | **Onesignal**           | [`@awesome-cordova-library/onesignal`](https://www.npmjs.com/package/@awesome-cordova-library/onesignal)                     | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/onesignal/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/onesignal)                     | <a href="https://www.npmjs.com/package/@awesome-cordova-library/onesignal" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/onesignal.svg" alt="NPM Downloads" /></a>                     |
 | **Shake**               | [`@awesome-cordova-library/shake`](https://www.npmjs.com/package/@awesome-cordova-library/shake)                             | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/shake/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/shake)                             | <a href="https://www.npmjs.com/package/@awesome-cordova-library/shake" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/shake.svg" alt="NPM Downloads" /></a>                             |
 | **Taptic Engine**       | [`@awesome-cordova-library/taptic-engine`](https://www.npmjs.com/package/@awesome-cordova-library/taptic-engine)             | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/taptic-engine/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/taptic-engine)             | <a href="https://www.npmjs.com/package/@awesome-cordova-library/taptic-engine" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/taptic-engine.svg" alt="NPM Downloads" /></a>             |
-| **Compressor Image**    | [`@awesome-cordova-library/compressor-image`](https://www.npmjs.com/package/@awesome-cordova-library/compressor-image)       | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/compressor-image/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/compressor-image)       | <a href="https://www.npmjs.com/package/@awesome-cordova-library/compressor-image" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/compressor-image.svg" alt="NPM Downloads" /></a>       |
 | **OIDC**                | [`@awesome-cordova-library/oidc`](https://www.npmjs.com/package/@awesome-cordova-library/oidc)                               | [![version](https://img.shields.io/npm/v/@awesome-cordova-library/oidc/latest.svg)](https://www.npmjs.com/package/@awesome-cordova-library/oidc)                               | <a href="https://www.npmjs.com/package/@awesome-cordova-library/oidc" target="_blank"><img src="https://img.shields.io/npm/dm/@awesome-cordova-library/oidc.svg" alt="NPM Downloads" /></a>                               |
 
 ## Example
@@ -126,10 +125,6 @@ tags:
 ## Taptic Engine Ios
 
 [See doc](./taptic-engine/README.md)
-
-## Compressor Image
-
-[See doc](./compressor-image/README.md)
 
 ## OIDC
 
