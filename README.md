@@ -10,7 +10,7 @@ tags:
 
 [![Tests](https://github.com/joazco/awesome-cordova-library/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/joazco/awesome-cordova-library/actions/workflows/tests.yml)
 
-[Online documentation](https://awesomecordovalibrary.com)
+[Online documentation](https://awesome-cordova-library.vercel.app/docs/)
 
 ## Packages
 
